@@ -11,13 +11,13 @@ html
     link(rel='import', href='/styles/ice.html')
   body(unresolved class="fullbleed layout vertical")
     template#app(is='dom-bind')
-      paper-drawer-panel
+      paper-drawer-panel(id="mainDrawer")
         paper-header-panel(drawer mode="seamed")
           // Drawer Toolbar
           paper-toolbar#drawerToolbar
             span.paper-font-title Menu
           // Drawer Content
-          paper-menu(selected="{{page}}" attr-for-selected="data-route")
+          paper-menu(selected="{{page}}" attr-for-selected="data-route" on-iron-select="closeDrawer")
             paper-item(data-route="guidelines") General Guidelines
             paper-submenu
               paper-item.menu-trigger Completing Parts 1&2
@@ -26,24 +26,24 @@ html
                 paper-item Part 2
             paper-submenu
               paper-item.menu-trigger Examples
-              paper-menu.menu-content.sublist(multi='')
+              paper-menu.menu-content.sublist
                 paper-submenu
                   paper-item.menu-trigger Cause of Death Certification
-                  paper-menu.menu-content.sublist(multi='')
-                    paper-item Example 1.1
+                  paper-menu.menu-content.sublist
+                    paper-item(data-route="examples") Example 1.1
                     paper-item Example 1.2
                 paper-submenu
                   paper-item.menu-trigger Other Examples
-                  paper-menu.menu-content.sublist(multi='')
+                  paper-menu.menu-content.sublist
                     paper-item Example 2.1
                     paper-item Example 2.2
             paper-submenu
               paper-item.menu-trigger Common Problems
-              paper-menu.menu-content.sublist(multi='')
+              paper-menu.menu-content.sublist
                 paper-item Unavailable 1
                 paper-item Unavailable 2
-            paper-item Aditional Resources
-            paper-item FAQs
+            paper-item(data-route="examples") Aditional Resources
+            paper-item(data-route="faqs") FAQs
         paper-header-panel(main mode="waterfall")
             paper-toolbar
               paper-icon-button(icon='menu', paper-drawer-toggle='')

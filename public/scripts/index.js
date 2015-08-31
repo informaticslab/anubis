@@ -1,6 +1,15 @@
 console.log("load index");
 
 var app=document.querySelector('#app');
+
+//console.log("app",app.$.mainDrawer);
+
+
+
+app.closeDrawer = function(){
+	this.$.mainDrawer.closeDrawer();
+}
+
 app.changepage=function(){
   this.$.mypages.selectNext();
 }

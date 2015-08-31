@@ -1,0 +1,24 @@
+{
+  "name": "anubis",
+  "version": "1.0.0",
+  "authors": [
+    "Sanjith David"
+  ],
+  "description": "Physicians' Handbook on Medical Certification of Death",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-elements": "polymerelements/iron-elements#~1.0.3",
+    "neon-elements": "polymerelements/neon-elements#~1.0.0",
+    "page": "visionmedia/page.js#~1.6.3",
+    "paper-elements": "polymerelements/paper-elements#~1.0.5",
+    "platinum-elements": "polymerelements/platinum-elements#~1.1.1",
+    "polymer": "Polymer/polymer#~1.1.1"
+  }
+}

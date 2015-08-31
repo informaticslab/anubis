@@ -1,0 +1,382 @@
+<style is="custom-style">
+/*
+ * PolymerThemes v1.0.3
+ * Homepage: https://polymerthemes.com
+ * Copyright 2015 Polymer Themes
+ * Licensed under BSD
+ * Based on Polymer: http://www.polymer-project.org/
+ * Compatible with Polymer 1.0
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Oxygen:700|Tinos");
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100%;
+  color: #191919;
+  background-color: #ffffff;
+  font-family: 'Tinos', serif;
+  font-weight: 400;
+}
+
+section {
+  padding: 40px 0px;
+}
+section[hero] {
+  background-color: #f1f1f1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px;
+  line-height: 1em;
+}
+
+h1, h3, h5 {
+  font-family: 'Oxygen', sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 30px 0px;
+}
+
+h2 {
+  color: #191919;
+  font-size: 35px;
+  margin: 20px 0px;
+}
+
+h3 {
+  font-size: 25px;
+  margin: 15px 0px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+a, a:active, a:visited, a:focus {
+  color: #191919;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #191919;
+  text-decoration: underline;
+}
+
+:root {
+  --default-primary-color: #191919;
+  --dark-primary-color: #191919;
+  --light-primary-color: #c5cae9;
+  --text-primary-color: #ffffff;
+  --accent-color: #ff4081;
+  --primary-background-color: #ffffff;
+  --primary-text-color: #191919;
+  --secondary-text-color: #191919;
+  --disabled-text-color: #313238;
+  --divider-color: #e0e0e0;
+  --paper-checkbox-checked-color: #191919;
+  --paper-checkbox-checked-ink-color: #191919;
+  --paper-checkbox-unchecked-color: #191919;
+  --paper-checkbox-unchecked-ink-color: #191919;
+  --paper-checkbox-label-color: #191919;
+  --paper-fab-background: #191919;
+  --paper-fab-disabled-background: #afb1b9;
+  --paper-fab-disabled-text: #313238;
+  --paper-icon-button-disabled-text: #afb1b9;
+  --paper-input-container-color: #7f7f7f;
+  --paper-input-container-focus-color: #191919;
+  --paper-input-container-invalid-color: #ef5350;
+  --paper-input-container-input-color: #7f7f7f;
+  --paper-menu-background-color: #f1f1f1;
+  --paper-menu-color: #191919;
+  --paper-menu-disabled-color: #afb1b9;
+  --paper-progress-active-color: #191919;
+  --paper-progress-secondary-color: #075290;
+  --paper-radio-button-checked-color: #191919;
+  --paper-radio-button-checked-ink-color: #b2b2b2;
+  --paper-radio-button-unchecked-color: #191919;
+  --paper-radio-button-unchecked-ink-color: #191919;
+  --paper-radio-button-label-color: #191919;
+  --paper-slider-knob-color: #191919;
+  --paper-slider-active-color: #191919;
+  --paper-slider-pin-color: #191919;
+  --paper-spinner-layer-1-color: #191919;
+  --paper-spinner-layer-2-color: #191919;
+  --paper-spinner-layer-3-color: #191919;
+  --paper-spinner-layer-4-color: #191919;
+  --paper-tabs-selection-bar-color: #80cbc4;
+  --paper-tab-ink: #80cbc4;
+  --paper-toggle-button-checked-bar-color: #191919;
+  --paper-toggle-button-checked-button-color: #191919;
+  --paper-toggle-button-checked-ink-color: #191919;
+  --paper-toggle-button-unchecked-bar-color: #191919;
+  --paper-toggle-button-unchecked-button-color: white;
+  --paper-toggle-button-unchecked-ink-color: white;
+  --paper-toolbar-background: #191919;
+  --paper-toolbar-color: #ffffff;
+}
+
+html paper-toolbar a, html paper-toolbar a:hover, html paper-toolbar a:active,
+html paper-toolbar a:visited, html paper-toolbar a:focus,
+html /deep/ paper-toolbar a, html /deep/ paper-toolbar a:hover,
+html /deep/ paper-toolbar a:active, html /deep/ paper-toolbar a:visited,
+html /deep/ paper-toolbar a:focus {
+  color: #ffffff;
+}
+html paper-button.primary, html paper-button.btn-primary,
+html paper-button[primary], html /deep/ paper-button.primary,
+html /deep/ paper-button.btn-primary, html /deep/ paper-button[primary] {
+  color: #191919;
+}
+html paper-button.primary[raised], html paper-button.btn-primary[raised],
+html paper-button[primary][raised], html /deep/ paper-button.primary[raised],
+html /deep/ paper-button.btn-primary[raised],
+html /deep/ paper-button[primary][raised] {
+  background-color: #191919;
+  color: #fff;
+}
+html paper-button.secondary, html paper-button.btn-secondary,
+html paper-button[secondary], html /deep/ paper-button.secondary,
+html /deep/ paper-button.btn-secondary, html /deep/ paper-button[secondary] {
+  color: #075290;
+}
+html paper-button.secondary[raised], html paper-button.btn-secondary[raised],
+html paper-button[secondary][raised], html /deep/ paper-button.secondary[raised],
+html /deep/ paper-button.btn-secondary[raised],
+html /deep/ paper-button[secondary][raised] {
+  background-color: #075290;
+  color: #fff;
+}
+html paper-button.success, html paper-button.btn-success,
+html paper-button[success], html /deep/ paper-button.success,
+html /deep/ paper-button.btn-success, html /deep/ paper-button[success] {
+  color: #8bc34a;
+}
+html paper-button.success[raised], html paper-button.btn-success[raised],
+html paper-button[success][raised], html /deep/ paper-button.success[raised],
+html /deep/ paper-button.btn-success[raised],
+html /deep/ paper-button[success][raised] {
+  background-color: #8bc34a;
+  color: #fff;
+}
+html paper-button.info, html paper-button.btn-info, html paper-button[info],
+html /deep/ paper-button.info, html /deep/ paper-button.btn-info,
+html /deep/ paper-button[info] {
+  color: #fadd60;
+}
+html paper-button.info[raised], html paper-button.btn-info[raised],
+html paper-button[info][raised], html /deep/ paper-button.info[raised],
+html /deep/ paper-button.btn-info[raised], html /deep/ paper-button[info][raised] {
+  background-color: #fadd60;
+  color: #4b421d;
+}
+html paper-button.warning, html paper-button.btn-warning,
+html paper-button[warning], html /deep/ paper-button.warning,
+html /deep/ paper-button.btn-warning, html /deep/ paper-button[warning] {
+  color: #ffb74d;
+}
+html paper-button.warning[raised], html paper-button.btn-warning[raised],
+html paper-button[warning][raised], html /deep/ paper-button.warning[raised],
+html /deep/ paper-button.btn-warning[raised],
+html /deep/ paper-button[warning][raised] {
+  background-color: #ffb74d;
+  color: #4d3717;
+}
+html paper-button.error, html paper-button.btn-error, html paper-button[error],
+html /deep/ paper-button.error, html /deep/ paper-button.btn-error,
+html /deep/ paper-button[error] {
+  color: #ef5350;
+}
+html paper-button.error[raised], html paper-button.btn-error[raised],
+html paper-button[error][raised], html /deep/ paper-button.error[raised],
+html /deep/ paper-button.btn-error[raised], html /deep/ paper-button[error][raised] {
+  background-color: #ef5350;
+  color: #481918;
+}
+html paper-button.link, html paper-button.btn-link, html paper-button[link],
+html /deep/ paper-button.link, html /deep/ paper-button.btn-link,
+html /deep/ paper-button[link] {
+  text-decoration: underline;
+}
+html paper-button[raised], html /deep/ paper-button[raised] {
+  color: #191919;
+}
+html paper-button[disabled], html /deep/ paper-button[disabled] {
+  color: #313238 !important;
+  background: #afb1b9 !important;
+}
+html paper-icon-button.primary, html paper-icon-button.btn-primary,
+html paper-icon-button[primary], html /deep/ paper-icon-button.primary,
+html /deep/ paper-icon-button.btn-primary, html /deep/ paper-icon-button[primary] {
+  color: #191919;
+}
+html paper-icon-button.primary:hover, html paper-icon-button.btn-primary:hover,
+html paper-icon-button[primary]:hover, html /deep/ paper-icon-button.primary:hover,
+html /deep/ paper-icon-button.btn-primary:hover,
+html /deep/ paper-icon-button[primary]:hover {
+  background-color: #e8e8e8;
+  background-color: rgba(25, 25, 25, 0.2);
+  border-radius: 50%;
+}
+html paper-icon-button.secondary, html paper-icon-button.btn-secondary,
+html paper-icon-button[secondary], html /deep/ paper-icon-button.secondary,
+html /deep/ paper-icon-button.btn-secondary,
+html /deep/ paper-icon-button[secondary] {
+  color: #075290;
+}
+html paper-icon-button.secondary:hover, html paper-icon-button.btn-secondary:hover,
+html paper-icon-button[secondary]:hover,
+html /deep/ paper-icon-button.secondary:hover,
+html /deep/ paper-icon-button.btn-secondary:hover,
+html /deep/ paper-icon-button[secondary]:hover {
+  background-color: #e6eef4;
+  background-color: rgba(7, 82, 144, 0.2);
+  border-radius: 50%;
+}
+html paper-icon-button.success, html paper-icon-button.btn-success,
+html paper-icon-button[success], html /deep/ paper-icon-button.success,
+html /deep/ paper-icon-button.btn-success, html /deep/ paper-icon-button[success] {
+  color: #8bc34a;
+}
+html paper-icon-button.success:hover, html paper-icon-button.btn-success:hover,
+html paper-icon-button[success]:hover, html /deep/ paper-icon-button.success:hover,
+html /deep/ paper-icon-button.btn-success:hover,
+html /deep/ paper-icon-button[success]:hover {
+  background-color: #f3f9ed;
+  background-color: rgba(139, 195, 74, 0.2);
+  border-radius: 50%;
+}
+html paper-icon-button.info, html paper-icon-button.btn-info,
+html paper-icon-button[info], html /deep/ paper-icon-button.info,
+html /deep/ paper-icon-button.btn-info, html /deep/ paper-icon-button[info] {
+  color: #fadd60;
+}
+html paper-icon-button.info:hover, html paper-icon-button.btn-info:hover,
+html paper-icon-button[info]:hover, html /deep/ paper-icon-button.info:hover,
+html /deep/ paper-icon-button.btn-info:hover,
+html /deep/ paper-icon-button[info]:hover {
+  background-color: #fffcef;
+  background-color: rgba(250, 221, 96, 0.2);
+  border-radius: 50%;
+}
+html paper-icon-button.warning, html paper-icon-button.btn-warning,
+html paper-icon-button[warning], html /deep/ paper-icon-button.warning,
+html /deep/ paper-icon-button.btn-warning, html /deep/ paper-icon-button[warning] {
+  color: #ffb74d;
+}
+html paper-icon-button.warning:hover, html paper-icon-button.btn-warning:hover,
+html paper-icon-button[warning]:hover, html /deep/ paper-icon-button.warning:hover,
+html /deep/ paper-icon-button.btn-warning:hover,
+html /deep/ paper-icon-button[warning]:hover {
+  background-color: #fff8ed;
+  background-color: rgba(255, 183, 77, 0.2);
+  border-radius: 50%;
+}
+html paper-icon-button.error, html paper-icon-button.btn-error,
+html paper-icon-button[error], html /deep/ paper-icon-button.error,
+html /deep/ paper-icon-button.btn-error, html /deep/ paper-icon-button[error] {
+  color: #ef5350;
+}
+html paper-icon-button.error:hover, html paper-icon-button.btn-error:hover,
+html paper-icon-button[error]:hover, html /deep/ paper-icon-button.error:hover,
+html /deep/ paper-icon-button.btn-error:hover,
+html /deep/ paper-icon-button[error]:hover {
+  background-color: #fdeeee;
+  background-color: rgba(239, 83, 80, 0.2);
+  border-radius: 50%;
+}
+html paper-checkbox #checkmark.paper-checkbox, html paper-checkbox /deep/,
+paper-checkbox::shadow #checkmark.paper-checkbox,
+html /deep/ paper-checkbox #checkmark.paper-checkbox,
+html /deep/ paper-checkbox /deep/, paper-checkbox::shadow #checkmark.paper-checkbox {
+  border-color: #fff !important;
+}
+html paper-dialog, html /deep/ paper-dialog {
+  color: #191919;
+  background-color: #ffffff;
+  font-family: 'Tinos', serif;
+  font-weight: 400;
+}
+html paper-dialog h1, html paper-dialog h2, html paper-dialog h3,
+html paper-dialog h4, html paper-dialog h5, html paper-dialog h6,
+html /deep/ paper-dialog h1, html /deep/ paper-dialog h2,
+html /deep/ paper-dialog h3, html /deep/ paper-dialog h4,
+html /deep/ paper-dialog h5, html /deep/ paper-dialog h6 {
+  overflow: visible;
+  padding: 0 1em;
+  text-align: center;
+}
+html paper-fab, html /deep/ paper-fab {
+  --text-primary-color: white;
+}
+html paper-fab, html /deep/ paper-fab {
+  background-color: #191919;
+  color: #fff;
+  --paper-fab-keyboard-focus-background: #595959;
+}
+html paper-fab.primary, html paper-fab.btn-primary, html paper-fab[primary],
+html /deep/ paper-fab.primary, html /deep/ paper-fab.btn-primary,
+html /deep/ paper-fab[primary] {
+  background-color: #191919;
+  color: #fff;
+  --paper-fab-keyboard-focus-background: #595959;
+}
+html paper-fab.secondary, html paper-fab.btn-secondary, html paper-fab[secondary],
+html /deep/ paper-fab.secondary, html /deep/ paper-fab.btn-secondary,
+html /deep/ paper-fab[secondary] {
+  background-color: #075290;
+  color: #fff;
+  --paper-fab-keyboard-focus-background: #2295f4;
+}
+html paper-fab.success, html paper-fab.btn-success, html paper-fab[success],
+html /deep/ paper-fab.success, html /deep/ paper-fab.btn-success,
+html /deep/ paper-fab[success] {
+  background-color: #8bc34a;
+  color: #fff;
+  --paper-fab-keyboard-focus-background: #496a23;
+}
+html paper-fab.info, html paper-fab.btn-info, html paper-fab[info],
+html /deep/ paper-fab.info, html /deep/ paper-fab.btn-info,
+html /deep/ paper-fab[info] {
+  background-color: #fadd60;
+  color: #4b421d;
+  --paper-fab-keyboard-focus-background: #d4ad07;
+}
+html paper-fab.warning, html paper-fab.btn-warning, html paper-fab[warning],
+html /deep/ paper-fab.warning, html /deep/ paper-fab.btn-warning,
+html /deep/ paper-fab[warning] {
+  background-color: #ffb74d;
+  color: #4d3717;
+  --paper-fab-keyboard-focus-background: #cd7a00;
+}
+html paper-fab.error, html paper-fab.btn-error, html paper-fab[error],
+html /deep/ paper-fab.error, html /deep/ paper-fab.btn-error,
+html /deep/ paper-fab[error] {
+  background-color: #ef5350;
+  color: #481918;
+  --paper-fab-keyboard-focus-background: #af1310;
+}
+html paper-fab[disabled], html /deep/ paper-fab[disabled] {
+  color: #313238 !important;
+  background: #afb1b9 !important;
+}
+html section.hero paper-menu, html section[hero] paper-menu,
+html /deep/ section.hero paper-menu, html /deep/ section[hero] paper-menu {
+  --paper-menu-background-color: #f1f1f1;
+}
+html paper-tabs, html /deep/ paper-tabs {
+  background-color: #191919;
+  color: #ffffff;
+}
+
+</style>

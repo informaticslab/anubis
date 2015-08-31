@@ -1,0 +1,82 @@
+doctype
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='mobile-web-app-capable', content='yes')
+    script(src='bower_components/webcomponentsjs/webcomponents.js')
+    script(src='bower_components/page/page.js')
+    link(rel='import', href='/includes/elements.html')
+    link(rel='import', href='/styles/ice.html')
+  body(unresolved class="fullbleed layout vertical")
+    template#app(is='dom-bind')
+      paper-drawer-panel
+        paper-header-panel(drawer mode="seamed")
+          // Drawer Toolbar
+          paper-toolbar#drawerToolbar
+            span.paper-font-title Menu
+          // Drawer Content
+          paper-menu(selected="{{page}}" attr-for-selected="data-route")
+            paper-item(data-route="guidelines") General Guidelines
+            paper-submenu
+              paper-item.menu-trigger Completing Parts 1&2
+              paper-menu.menu-content.sublist
+                paper-item Part 1
+                paper-item Part 2
+            paper-submenu
+              paper-item.menu-trigger Examples
+              paper-menu.menu-content.sublist(multi='')
+                paper-submenu
+                  paper-item.menu-trigger Cause of Death Certification
+                  paper-menu.menu-content.sublist(multi='')
+                    paper-item Example 1.1
+                    paper-item Example 1.2
+                paper-submenu
+                  paper-item.menu-trigger Other Examples
+                  paper-menu.menu-content.sublist(multi='')
+                    paper-item Example 2.1
+                    paper-item Example 2.2
+            paper-submenu
+              paper-item.menu-trigger Common Problems
+              paper-menu.menu-content.sublist(multi='')
+                paper-item Unavailable 1
+                paper-item Unavailable 2
+            paper-item Aditional Resources
+            paper-item FAQs
+        paper-header-panel(main mode="waterfall")
+            paper-toolbar
+              paper-icon-button(icon='menu', paper-drawer-toggle='')
+              div Death Certification Quick Guide
+            //button(on-click="changepage")
+              | next
+            button(on-click="_onPrevClick")
+              | &lt;&lt;
+            button(on-click="_onNextClick")
+              | &gt;&gt;
+            //iron-pages(id="mypages" selected='1')
+              anubis-guidelines
+              anubis-examples
+              anubis-faqs
+            iron-pages(id="pages" class="flex" selected="{{page}}" attr-for-selected="data-route")
+              //neon-animatable(data-route="guidelines")
+              anubis-guidelines(data-route="guidelines")
+              //neon-animatable(data-route="examples")
+              anubis-examples(data-route="examples")
+              //neon-animatable(data-route="faqs")
+              anubis-faqs(data-route="faqs")
+            //paper-tabs(align-bottom)
+              paper-tab Tab 1
+              paper-tab Tab 2
+              paper-tab Tab 3
+          //
+            <iron-pages selected="{{selected}}">
+            <div>Page 1</div>
+            <div>Page 2</div>
+            <div>Page 3</div>
+            </iron-pages>
+      paper-toast#caching-complete(duration='6000', text='Caching complete! This app will work offline.')
+      paper-toast#caching-incomplete(duration='6000', text='Caching incomplete! This app will not work offline.')
+      platinum-sw-register(auto-register='true', href='sw-import.js', clients-claim='false', skip-waiting='true', on-service-worker-installed='displayInstalledToast', on-service-worker-error='displayErrorToast' state='{{state}}')
+        platinum-sw-cache(default-cache-strategy='networkFirst')
+    script(src='/scripts/index.js')

@@ -1,0 +1,21 @@
+{
+  "name": "anubis",
+  "version": "1.0.0",
+  "description": "Physicians' Handbook on Medical Certification of Death",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  },
+  "engine": {
+    "node": ">=0.10"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}

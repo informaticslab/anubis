@@ -1,0 +1,14 @@
+src/lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+src/npm-debug.log
+/public/bower_components
+/node_modules
+
+.settings/launch.json

@@ -17,7 +17,8 @@ html
           paper-toolbar#drawerToolbar
             span.paper-font-title Menu
           // Drawer Content
-          paper-menu(selected="{{page}}" attr-for-selected="data-route" on-iron-select="closeDrawer")
+          anubis-menu-main
+          //paper-menu(selected="{{page}}" attr-for-selected="data-route" on-iron-select="closeDrawer")
             paper-item(data-route="guidelines") General Guidelines
             paper-submenu
               paper-item.menu-trigger Completing Parts 1&2
@@ -37,6 +38,25 @@ html
                   paper-menu.menu-content.sublist
                     paper-item Example 2.1
                     paper-item Example 2.2
+            //paper-submenu
+              paper-item.menu-trigger Examples
+              paper-menu.menu-content.sublist
+                paper-item Example 1
+                paper-item Example 1
+                paper-submenu
+                  paper-item.menu-trigger Example 2
+                  paper-menu.menu-content.sublist
+                    paper-item Example 2.1
+                    paper-item Examplebower 2.2
+            //-   paper-submenu.menu-content.sublist
+            //-     paper-item.menu-trigger Cause of Death Certification
+            //-     paper-submenu.menu-content.sublist
+            //-       paper-item Example 1.1
+            //-       paper-item Example 1.2
+            //-     paper-item.menu-trigger Other Examples
+            //-     paper-submenu.menu-content.sublist 
+            //-       paper-item Example 2.1
+            //-       paper-item Example 2.2
             paper-submenu
               paper-item.menu-trigger Common Problems
               paper-menu.menu-content.sublist

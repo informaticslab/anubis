@@ -1,0 +1,70 @@
+<dom-module id="anubis-menu-main">
+  <template>
+    <paper-menu selected="{{page}}" attr-for-selected="data-route">
+  <paper-item data-route="guidelines">General Guidelines</paper-item>
+  <paper-submenu>
+    <paper-item class="menu-trigger">Completing Parts 1&2</paper-item>
+    <paper-menu class="menu-content sublist">
+      <paper-item>Part 1</paper-item>
+      <paper-item>Part 2</paper-item>
+    </paper-menu>
+  </paper-submenu>
+  <paper-submenu>
+    <paper-item class="menu-trigger">Examples</paper-item>
+    <paper-menu class="menu-content sublist">
+      <paper-submenu>
+        <paper-item class="menu-trigger">Cause of Death Certification</paper-item>
+        <paper-menu class="menu-content sublist">
+          <paper-item data-route="examples">Example 1.1</paper-item>
+          <paper-item>Example 1.2</paper-item>
+        </paper-menu>
+      </paper-submenu>
+      <paper-submenu>
+        <paper-item class="menu-trigger">Other Examples</paper-item>
+        <paper-menu class="menu-content sublist">
+          <paper-item>Example 2.1</paper-item>
+          <paper-item>Example 2.2</paper-item>
+        </paper-menu>
+      </paper-submenu>
+    </paper-menu>
+  </paper-submenu>
+  <paper-submenu>
+  <paper-item class="menu-trigger">Common Problems</paper-item>
+  <paper-menu class="menu-content sublist">
+    <paper-item>Unavailable 1</paper-item>
+    <paper-item>Unavailable 2</paper-item>
+  </paper-menu>
+</paper-submenu>
+<paper-item data-route="examples">Aditional Resources
+  <paper-item data-route="faqs">FAQs</paper-item>
+</paper-item>
+</paper-menu>
+
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'anubis-menu-main',
+    properties: {
+      selectedIndex: {
+        type: Number,
+        value: 0,
+        observer: '_selectedIndexChanged'
+      }
+    },
+    _selectedIndexChanged: function(newIndex, oldIndex) {
+      if (typeof newIndex === 'number') {
+        this.selectedMessage = 'You selected item #' + newIndex + '.';
+        console.log(this.selectedMessage);
+      }
+      if (typeof oldIndex === 'number') {
+        this.oldSelectedMessage = 'Before, you had item #' + oldIndex + ' selected.';
+        console.log(this.oldSelectedMessage);
+      }
+      var mainDrawer = document.querySelector("#mainDrawer");
+      console.log(mainDrawer);
+      //mainDrawer.closeDrawer();
+    }
+  });
+</script>

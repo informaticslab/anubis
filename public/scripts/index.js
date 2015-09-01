@@ -7,6 +7,7 @@ var app=document.querySelector('#app');
 
 
 app.closeDrawer = function(){
+	console.log("selected");
 	this.$.mainDrawer.closeDrawer();
 }
 

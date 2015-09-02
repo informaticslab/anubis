@@ -1,11 +1,11 @@
 <dom-module id="anubis-menu-main">
   <template>
-    <paper-menu selected="{{page}}" attr-for-selected="data-route">
+    <paper-menu selected="{{pageSelected}}" attr-for-selected="data-route">
   <paper-item data-route="guidelines">General Guidelines</paper-item>
   <paper-submenu>
     <paper-item class="menu-trigger">Completing Parts 1&2</paper-item>
     <paper-menu class="menu-content sublist">
-      <paper-item>Part 1</paper-item>
+      <paper-item data-route="examples">Part 1</paper-item>
       <paper-item>Part 2</paper-item>
     </paper-menu>
   </paper-submenu>
@@ -51,7 +51,11 @@
         type: Number,
         value: 0,
         observer: '_selectedIndexChanged'
-      }
+      },
+      pageSelected: {
+          type: String,
+          notify: true
+        }
     },
     _selectedIndexChanged: function(newIndex, oldIndex) {
       if (typeof newIndex === 'number') {

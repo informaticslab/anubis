@@ -10,14 +10,14 @@ app.set('views', rootPath+'/public/views')
 app.set('view engine','jade');
 //app.set('views', rootPath + '/public/views');
 //app.set('bower_components', rootPath + '/public/bower_components');
-app.use(express.static('public'));
+app.use(express.static(rootPath+'/public'));
 
 
 var server = app.listen(4044, function () {
   var host = server.address().address;
   var port = server.address().port;
 
-  console.log('Example app listening at http://%s:%s', host, port);
+  console.log('App listening at http://%s:%s', host, port);
 
 });
 

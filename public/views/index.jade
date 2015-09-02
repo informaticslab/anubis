@@ -5,10 +5,10 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='apple-mobile-web-app-capable', content='yes')
     meta(name='mobile-web-app-capable', content='yes')
-    script(src='bower_components/webcomponentsjs/webcomponents.js')
-    script(src='bower_components/page/page.js')
+    script(src='/bower_components/webcomponentsjs/webcomponents.js')
+    script(src='/bower_components/page/page.js')
     link(rel='import', href='/includes/elements.html')
-    link(rel='import', href='/styles/ice.html')
+    link(rel='import', href='/styles/sky.html')
   body(unresolved class="fullbleed layout vertical")
     template#app(is='dom-bind')
       paper-drawer-panel(id="mainDrawer")
@@ -22,10 +22,16 @@ html
           paper-toolbar
             paper-icon-button(icon='menu', paper-drawer-toggle='')
             div Death Certification Quick Guide
-          button(on-click="_onPrevClick")
+          //button(on-click="_onPrevClick")
             | &lt;&lt;
-          button(on-click="_onNextClick")
+          //button(on-click="_onNextClick")
             | &gt;&gt;
+          span
+            | --
+          span
+            | {{page}}
+          span
+            | --
           iron-pages(id="pages" class="flex" selected="{{page}}" attr-for-selected="data-route")
             anubis-guidelines(data-route="guidelines")
             anubis-examples(data-route="examples")

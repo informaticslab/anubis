@@ -1,44 +1,30 @@
 <dom-module id="anubis-menu-main">
   <template>
-    <paper-menu selected="{{pageSelected}}" attr-for-selected="data-route">
-  <paper-item data-route="guidelines">General Guidelines</paper-item>
-  <paper-submenu>
-    <paper-item class="menu-trigger">Completing Parts 1&2</paper-item>
-    <paper-menu class="menu-content sublist">
-      <paper-item data-route="examples">Part 1</paper-item>
-      <paper-item>Part 2</paper-item>
-    </paper-menu>
-  </paper-submenu>
-  <paper-submenu>
-    <paper-item class="menu-trigger">Examples</paper-item>
-    <paper-menu class="menu-content sublist">
-      <paper-submenu>
-        <paper-item class="menu-trigger">Cause of Death Certification</paper-item>
-        <paper-menu class="menu-content sublist">
-          <paper-item data-route="examples">Example 1.1</paper-item>
-          <paper-item>Example 1.2</paper-item>
-        </paper-menu>
-      </paper-submenu>
-      <paper-submenu>
-        <paper-item class="menu-trigger">Other Examples</paper-item>
-        <paper-menu class="menu-content sublist">
-          <paper-item>Example 2.1</paper-item>
-          <paper-item>Example 2.2</paper-item>
-        </paper-menu>
-      </paper-submenu>
-    </paper-menu>
-  </paper-submenu>
-  <paper-submenu>
-  <paper-item class="menu-trigger">Common Problems</paper-item>
-  <paper-menu class="menu-content sublist">
-    <paper-item>Unavailable 1</paper-item>
-    <paper-item>Unavailable 2</paper-item>
-  </paper-menu>
-</paper-submenu>
-<paper-item data-route="examples">Aditional Resources</paper-item>
-  <paper-item data-route="faqs">FAQs</paper-item>
+  <paper-menu id="menu" attr-for-selected="data-route" selected="{{pageSelected}}" >
+    <paper-item data-route="guidelines">General Guidelines</paper-item>
+    <paper-submenu>
+      <paper-item class="menu-trigger" >Completing Parts 1&2</paper-item>
+      <paper-menu class="menu-content sublist" selected="{{subPageSelected}}" attr-for-selected="data-route" >
+        <paper-item data-route="faqs">Part 1</paper-item>
+        <paper-item data-route="examples">Part 2</paper-item>
+      </paper-menu>
+    </paper-submenu>
+    <paper-submenu>
+      <paper-item class="menu-trigger" >Completing Parts 1&2</paper-item>
+      <paper-menu class="menu-content sublist" selected="{{subPageSelected2}}" attr-for-selected="data-route" >
+        <paper-item data-route="faqs">Part 1</paper-item>
+        <paper-item data-route="examples">Part 2</paper-item>
+          <paper-submenu>
+            <paper-item class="menu-trigger" >Completing Parts 1&2</paper-item>
+            <paper-menu class="menu-content sublist" selected="{{subPageSelected1}}" attr-for-selected="data-route" >
+              <paper-item data-route="faqs">Part 1</paper-item>
+              <paper-item data-route="examples">Part 2</paper-item>
+            </paper-menu>
+          </paper-submenu>
+      </paper-menu>
+    </paper-submenu>
 
-</paper-menu>
+  </paper-menu>
 
   </template>
 </dom-module>
@@ -49,25 +35,65 @@
     properties: {
       selectedIndex: {
         type: Number,
-        value: 0,
-        observer: '_selectedIndexChanged'
+        value: 0
       },
+      menuSelected: {
+          type: String,
+          notify: true,
+          reflectToAttribute: true
+        },
       pageSelected: {
           type: String,
-          notify: true
+          observer: '_selectedIndexChanged'
+        },
+      subPageSelected: {
+          type: String,
+          observer: '_selectedIndexChanged'
+        },
+      subPageSelected1: {
+          type: String,
+          observer: '_selectedIndexChanged'
+        },
+      subPageSelected2: {
+          type: String,
+          observer: '_selectedIndexChanged'
         }
     },
     _selectedIndexChanged: function(newIndex, oldIndex) {
-      if (typeof newIndex === 'number') {
-        this.selectedMessage = 'You selected item #' + newIndex + '.';
-        console.log(this.selectedMessage);
+      console.log(this.pageSelected,this.subPageSelected,this.subPageSelected1,this.subPageSelected2)
+      // if (typeof newIndex === 'number') {
+      //   this.selectedMessage = 'You selected item #' + newIndex + '.';
+      //   console.log(this.selectedMessage);
+      // }
+      // if (typeof oldIndex === 'number') {
+      //   this.oldSelectedMessage = 'Before, you had item #' + oldIndex + ' selected.';
+      //   console.log(this.oldSelectedMessage);
+      // }
+      // var mainDrawer = document.querySelector("#mainDrawer");
+      console.log(newIndex, oldIndex);
+      if(newIndex==null)
+      {
+        this.menuSelected=oldIndex;
       }
-      if (typeof oldIndex === 'number') {
-        this.oldSelectedMessage = 'Before, you had item #' + oldIndex + ' selected.';
-        console.log(this.oldSelectedMessage);
+      else
+      {
+        this.menuSelected=newIndex;
+        // this.pageSelected=null;
+        // this.subPageSelected=null;
+        // this.subPageSelected1=null;
+        // this.subPageSelected2=null;
       }
-      var mainDrawer = document.querySelector("#mainDrawer");
-      console.log(mainDrawer);
+      // var m = this.$.menu;
+      // this.setAttribute('menuSelected', 'loaded')
+      
+      console.log(this.menuSelected);
+      //mainDrawer.closeDrawer();
+    },
+    callfunc: function(e,d) {
+      console.log("selected",e, d);
+      console.log(pageSelected);
+      var m = document.querySelector("#menu")
+      console.log(m.selectedValues);
       //mainDrawer.closeDrawer();
     }
   });

@@ -21,6 +21,22 @@ var server = app.listen(4044, function () {
 
 });
 
+
+
+var https = require('https'),      // module for https
+    fs =    require('fs');         // required to read certs and keys
+
+var options = {
+    key:    fs.readFileSync('/sec/certs/server-key.pem'),
+    cert:   fs.readFileSync('/sec/certs/server-cert.pem'),
+    ca:     [fs.readFileSync('/sec/certs/gd_bundle-g2.crt'),fs.readFileSync('/sec/certs/HHSPIVcachn.pem')],
+    requestCert:        false,
+    rejectUnauthorized: false,
+};
+
+https.createServer(options, app).listen(4400);
+
+
 app.get('/', function(req, res) {
   res.render('index');
   //res.render("views/index");

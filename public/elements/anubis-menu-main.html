@@ -1,6 +1,8 @@
+<link rel="import" href="/styles/custom-styles.html">
 <dom-module id="anubis-menu-main">
   <template>
-  <paper-menu id="menu" attr-for-selected="data-route" selected="{{pageSelected}}" >
+  <style include="custom-styles"></style>
+  <paper-menu class="menu-color" id="menu" attr-for-selected="data-route" selected="{{pageSelected}}" >
     <paper-item data-route="guidelines">General Guidelines</paper-item>
     <paper-submenu>
       <paper-item class="menu-trigger" >Completing Parts 1&2</paper-item>

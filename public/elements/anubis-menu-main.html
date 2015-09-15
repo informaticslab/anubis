@@ -2,30 +2,33 @@
 <dom-module id="anubis-menu-main">
   <template>
   <style include="custom-styles"></style>
-  <paper-menu class="menu-color" id="menu" attr-for-selected="data-route" selected="{{pageSelected}}" >
-    <paper-item data-route="guidelines">General Guidelines</paper-item>
+  <paper-menu class="menu-color" id="menu1" attr-for-selected="proute" selected="{{pageSelected1}}" >
+    <paper-item proute="1">1</paper-item>
+    <paper-item proute="2">2</paper-item>
+    <paper-item proute="3">3</paper-item>
     <paper-submenu>
-      <paper-item class="menu-trigger" >Completing Parts 1&2</paper-item>
-      <paper-menu class="menu-content sublist" selected="{{subPageSelected}}" attr-for-selected="data-route" >
-        <paper-item data-route="faqs">Part 1</paper-item>
-        <paper-item data-route="examples">Part 2</paper-item>
+      <paper-item class="menu-trigger">4</paper-item>
+      <paper-menu class="menu-content sublist" id="menu21"  attr-for-selected="proute" selected="{{pageSelected21}}">
+        <paper-item proute="4.1">4.1</paper-item>
+        <paper-item proute="4.2">4.2</paper-item>
+        <paper-item proute="4.3">4.3</paper-item>
       </paper-menu>
     </paper-submenu>
     <paper-submenu>
-      <paper-item class="menu-trigger" >Completing Parts 1&2</paper-item>
-      <paper-menu class="menu-content sublist" selected="{{subPageSelected2}}" attr-for-selected="data-route" >
-        <paper-item data-route="faqs">Part 1</paper-item>
-        <paper-item data-route="examples">Part 2</paper-item>
-          <paper-submenu>
-            <paper-item class="menu-trigger" >Completing Parts 1&2</paper-item>
-            <paper-menu class="menu-content sublist" selected="{{subPageSelected1}}" attr-for-selected="data-route" >
-              <paper-item data-route="faqs">Part 1</paper-item>
-              <paper-item data-route="examples">Part 2</paper-item>
-            </paper-menu>
-          </paper-submenu>
+      <paper-item class="menu-trigger">5</paper-item>
+      <paper-menu class="menu-content sublist" id="menu22"  attr-for-selected="proute" selected="{{pageSelected22}}">
+        <paper-item proute="5.1">5.1</paper-item>
+        <paper-item proute="5.2">5.2</paper-item>
+        <paper-submenu>
+          <paper-item class="menu-trigger">5.3</paper-item>
+          <paper-menu class="menu-content sublist" id="menu31" attr-for-selected="proute" selected="{{pageSelected31}}">
+            <paper-item proute="5.3.1">5.3.1</paper-item>
+            <paper-item proute="5.3.2">5.3.2</paper-item>
+            <paper-item proute="5.3.3">5.3.3</paper-item>
+          </paper-menu>
+        </paper-submenu>
       </paper-menu>
     </paper-submenu>
-
   </paper-menu>
 
   </template>
@@ -35,68 +38,71 @@
   Polymer({
     is: 'anubis-menu-main',
     properties: {
-      selectedIndex: {
-        type: Number,
-        value: 0
-      },
       menuSelected: {
           type: String,
           notify: true,
           reflectToAttribute: true
         },
-      pageSelected: {
+      pageSelected1: {
           type: String,
-          observer: '_selectedIndexChanged'
+          observer: '_pageSelectedChanged',
+          //notify: true
         },
-      subPageSelected: {
+      pageSelected21: {
           type: String,
-          observer: '_selectedIndexChanged'
+          observer: '_pageSelectedChanged',
+          //notify: true
         },
-      subPageSelected1: {
+      pageSelected22: {
           type: String,
-          observer: '_selectedIndexChanged'
+          observer: '_pageSelectedChanged',
+          //notify: true
         },
-      subPageSelected2: {
+      pageSelected31: {
           type: String,
-          observer: '_selectedIndexChanged'
+          observer: '_pageSelectedChanged',
+          //notify: true
+        } 
+    },
+    _pageSelectedChanged: function(newIndex, oldIndex) {
+      if(newIndex!=null)
+      {
+        // console.log("selected",newIndex,oldIndex);
+        // console.log("menu1",this.$.menu1.selected);
+        // console.log("menu21",this.$.menu21.selected);
+        // console.log("menu22",this.$.menu22.selected);
+        // console.log("menu31",this.$.menu31.selected);
+        if(newIndex==null)
+        {
+          this.menuSelected=oldIndex;
         }
-    },
-    _selectedIndexChanged: function(newIndex, oldIndex) {
-      console.log(this.pageSelected,this.subPageSelected,this.subPageSelected1,this.subPageSelected2)
-      // if (typeof newIndex === 'number') {
-      //   this.selectedMessage = 'You selected item #' + newIndex + '.';
-      //   console.log(this.selectedMessage);
-      // }
-      // if (typeof oldIndex === 'number') {
-      //   this.oldSelectedMessage = 'Before, you had item #' + oldIndex + ' selected.';
-      //   console.log(this.oldSelectedMessage);
-      // }
-      // var mainDrawer = document.querySelector("#mainDrawer");
-      console.log(newIndex, oldIndex);
-      if(newIndex==null)
-      {
-        this.menuSelected=oldIndex;
+        else
+        {
+          this.menuSelected=newIndex;
+          var mainDrawer=document.querySelector('#mainDrawer');
+          mainDrawer.closeDrawer();
+        }
+        this.clearOldSelections();
       }
-      else
-      {
-        this.menuSelected=newIndex;
-        // this.pageSelected=null;
-        // this.subPageSelected=null;
-        // this.subPageSelected1=null;
-        // this.subPageSelected2=null;
-      }
-      // var m = this.$.menu;
-      // this.setAttribute('menuSelected', 'loaded')
-      
-      console.log(this.menuSelected);
-      //mainDrawer.closeDrawer();
     },
-    callfunc: function(e,d) {
-      console.log("selected",e, d);
-      console.log(pageSelected);
-      var m = document.querySelector("#menu")
-      console.log(m.selectedValues);
-      //mainDrawer.closeDrawer();
+    clearOldSelections: function(){
+      //console.log("clearOldSelections");
+      if(this.$.menu1.selected!=this.menuSelected)
+      {
+        this.$.menu1.selected=null
+      }
+      if(this.$.menu21.selected!=this.menuSelected)
+      {
+        this.$.menu21.selected=null
+      }
+      if(this.$.menu22.selected!=this.menuSelected)
+      {
+        this.$.menu22.selected=null
+      }
+      if(this.$.menu31.selected!=this.menuSelected)
+      {
+        this.$.menu31.selected=null
+      }
     }
   });
 </script>

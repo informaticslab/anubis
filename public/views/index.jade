@@ -31,10 +31,11 @@ html
             | {{page}}
           span
             | --
-          iron-pages(id="pages" class="flex" selected="{{page}}" attr-for-selected="data-route")
-            anubis-guidelines(data-route="guidelines")
-            anubis-examples(data-route="examples")
-            anubis-faqs(data-route="faqs")
+          div.main-page
+            iron-pages(id="pages" class="flex" selected="{{page}}" attr-for-selected="page-route")
+              anubis-guidelines(page-route="guidelines")
+              anubis-examples(page-route="examples")
+              anubis-faqs(page-route="faqs")
       paper-toast#caching-complete(duration='6000', text='Caching complete! This app will work offline.')
       paper-toast#caching-incomplete(duration='6000', text='Caching incomplete! This app will not work offline.')
       platinum-sw-register(auto-register='true', href='sw-import.js', clients-claim='false', skip-waiting='true', on-service-worker-installed='displayInstalledToast', on-service-worker-error='displayErrorToast' state='{{state}}')

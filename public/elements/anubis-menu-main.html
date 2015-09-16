@@ -1,11 +1,28 @@
 <link rel="import" href="/styles/custom-styles.html">
 <dom-module id="anubis-menu-main">
   <template>
-  <style include="custom-styles"></style>
-  <paper-menu class="menu-color" id="menu1" attr-for-selected="proute" selected="{{pageSelected1}}" >
+  <!--<style include="custom-styles"></style>-->
+  <style>
+    paper-menu[id^="menu2"] paper-item {
+      padding-left: 30px;
+    }
+    paper-menu[id^="menu3"] paper-item {
+      padding-left: 60px;
+    }
+  </style>
+  <paper-menu id="menu11" attr-for-selected="proute" selected="{{pageSelected1}}" >
     <paper-item proute="1">General Guidelines</paper-item>
     <paper-submenu>
-      <paper-item class="menu-trigger">Completeing Parts 1&2</paper-item>
+      <paper-item class="menu-trigger">
+        <paper-icon-item>
+          <div item-icon></div>
+          <div class="flex">Alphonso</div>
+          <iron-icon icon="expand-more"></iron-icon>
+        </paper-icon-item>
+
+        <!--     Completing Parts 1&2
+          <iron-icon icon="expand-more"></iron-icon> -->
+      </paper-item>
       <paper-menu class="menu-content sublist" id="menu21"  attr-for-selected="proute" selected="{{pageSelected21}}">
         <paper-item proute="4.1">Part 1</paper-item>
         <paper-item proute="4.2">Part 2</paper-item>
@@ -111,9 +128,9 @@
     },
     clearOldSelections: function(){
       //console.log("clearOldSelections");
-      if(this.$.menu1.selected!=this.menuSelected)
+      if(this.$.menu11.selected!=this.menuSelected)
       {
-        this.$.menu1.selected=null
+        this.$.menu11.selected=null
       }
       if(this.$.menu21.selected!=this.menuSelected)
       {

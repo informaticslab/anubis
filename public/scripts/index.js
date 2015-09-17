@@ -1,4 +1,5 @@
 console.log("load index");
+window.setTimeout(loadApp,2000);
 
 var app=document.querySelector('#app');
 
@@ -17,6 +18,8 @@ app.changepage=function(){
 
 
 app.page = "faqs";
+app.loadAppFlag=0;
+
 
 app._onPrevClick = function() {
 this.$.pages.entryAnimation = 'fade-in-animation';
@@ -53,3 +56,9 @@ app.displayErrorToast = function(ss) {
 app.fired = function(ss) {
 	console.log("fired",ss);
 };
+
+function loadApp()
+{
+
+app.loadAppFlag=1;
+}

@@ -7,38 +7,43 @@ html
     meta(name='mobile-web-app-capable', content='yes')
     script(src='/bower_components/webcomponentsjs/webcomponents.js')
     link(rel='import', href='/includes/elements.html')
-    link(rel='import', href='/styles/citric-flames.html')
+    link(rel='import', href='/styles/sky.html')
     link(rel="stylesheet" href="/styles/custom.css")  
   body(unresolved class="fullbleed layout vertical")
     template#app(is='dom-bind')
-      paper-drawer-panel(id="mainDrawer")
-        paper-header-panel(drawer mode="seamed")
-          // Drawer Toolbar
-          paper-toolbar#drawerToolbar
-            span.paper-font-title Menu
-          // Drawer Content
-          anubis-menu-main(menu-selected="{{page}}")
-        paper-header-panel(main mode="waterfall")
-          paper-toolbar
-            paper-icon-button(icon='menu', paper-drawer-toggle='')
-            div Death Certification Quick Guide
-          //button(on-click="_onPrevClick")
-            | &lt;&lt;
-          //button(on-click="_onNextClick")
-            | &gt;&gt;
-          span
-            | --
-          span
-            | {{page}}
-          span
-            | --
-          div.main-page
-            iron-pages(id="pages" class="flex" selected="{{page}}" attr-for-selected="page-route")
-              anubis-guidelines(page-route="guidelines")
-              anubis-examples(page-route="examples")
-              anubis-faqs(page-route="faqs")
-      paper-toast#caching-complete(duration='6000', text='Caching complete! This app will work offline.')
-      paper-toast#caching-incomplete(duration='6000', text='Caching incomplete! This app will not work offline.')
-      platinum-sw-register(auto-register='true', href='sw-import.js', clients-claim='false', skip-waiting='true', on-service-worker-installed='displayInstalledToast', on-service-worker-error='displayErrorToast' state='{{state}}')
-        platinum-sw-cache(default-cache-strategy='networkFirst')
+      neon-animated-pages(id="pages" class="flex" selected="{{loadAppFlag}}" entry-animation="slide-down-animation" exit-animation="slide-up-animation")
+        neon-animatable(id="splash")
+          | 1
+        neon-animatable
+          paper-drawer-panel(id="mainDrawer")
+            paper-header-panel(drawer mode="seamed")
+              // Drawer Toolbar
+              paper-toolbar#drawerToolbar
+                span.paper-font-title Menu
+              // Drawer Content
+              anubis-menu-main(menu-selected="{{page}}")
+            paper-header-panel(main mode="waterfall")
+              paper-toolbar
+                paper-icon-button(icon='menu', paper-drawer-toggle='')
+                div Death Certification Quick Guide
+              //button(on-click="_onPrevClick")
+                | &lt;&lt;
+              //button(on-click="_onNextClick")
+                | &gt;&gt;
+              span
+                | --
+              span
+                | {{page}}
+              span
+                | --
+              div.main-page
+                iron-pages(id="pages" class="flex" selected="{{page}}" attr-for-selected="page-route")
+                  anubis-guidelines(page-route="guidelines")
+                  anubis-examples(page-route="examples")
+                  anubis-faqs(page-route="faqs")
+                  anubis-part1(page-route="part1")
+          paper-toast#caching-complete(duration='6000', text='Caching complete! This app will work offline.')
+          paper-toast#caching-incomplete(duration='6000', text='Caching incomplete! This app will not work offline.')
+          platinum-sw-register(auto-register='true', href='sw-import.js', clients-claim='false', skip-waiting='true', on-service-worker-installed='displayInstalledToast', on-service-worker-error='displayErrorToast' state='{{state}}')
+            platinum-sw-cache(default-cache-strategy='networkFirst')
     script(src='/scripts/index.js')

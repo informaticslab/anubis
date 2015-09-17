@@ -1,5 +1,5 @@
 console.log("load index");
-window.setTimeout(loadApp,1);
+window.setTimeout(loadApp,5000);
 
 var app=document.querySelector('#app');
 

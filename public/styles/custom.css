@@ -1,9 +1,14 @@
 .main-page{
 	padding:10px;
 }
-neon-animatable#splash {
-        background: #e36b2c;
-      }
+
+.splash {
+  background-color: #e36b2c;
+  font-size: 33px;
+  /*background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(/images/splash.svg);*/
+}
 paper-toolbar#drawerToolbar{
 	background-image: url('/images/drawer-image1.jpg');
 	background-repeat: no-repeat;

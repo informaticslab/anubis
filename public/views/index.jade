@@ -7,7 +7,7 @@ html
     meta(name='mobile-web-app-capable', content='yes')
     script(src='/bower_components/webcomponentsjs/webcomponents.js')
     link(rel='import', href='/includes/elements.html')
-    link(rel='import', href='/styles/sky.html')
+    link(rel='import', href='/styles/custom-theme.html')
     link(rel="stylesheet" href="/styles/custom.css")  
   body(unresolved class="fullbleed layout vertical")
     template#app(is='dom-bind')
@@ -16,10 +16,11 @@ html
           | 1
         neon-animatable
           paper-drawer-panel(id="mainDrawer")
-            paper-header-panel(drawer mode="seamed")
+            paper-header-panel(drawer mode="waterfall-tall"  )
               // Drawer Toolbar
-              paper-toolbar#drawerToolbar
-                span.paper-font-title Menu
+              paper-toolbar(id="drawerToolbar")
+                iron-image( style="width:256px; height:144px;" sizing="cover" src="/images/drawer-image1.jpg")
+                //span.paper-font-title Menu
               // Drawer Content
               anubis-menu-main(menu-selected="{{page}}")
             paper-header-panel(main mode="waterfall")

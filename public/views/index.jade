@@ -16,10 +16,11 @@ html
           | 1
         neon-animatable
           paper-drawer-panel(id="mainDrawer")
-            paper-header-panel(drawer mode="waterfall-tall"  )
+            paper-header-panel(drawer mode="waterfall-tall"  tall-class="medium-tall")
               // Drawer Toolbar
-              paper-toolbar(id="drawerToolbar")
-                iron-image( style="width:256px; height:144px;" sizing="cover" src="/images/drawer-image1.jpg")
+              paper-toolbar(id="drawerToolbar" style)
+                .flex
+                //img.flex(src="/images/drawer-image1.jpg")
                 //span.paper-font-title Menu
               // Drawer Content
               anubis-menu-main(menu-selected="{{page}}")

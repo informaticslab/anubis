@@ -4,3 +4,8 @@
 neon-animatable#splash {
         background: #e36b2c;
       }
+paper-toolbar#drawerToolbar{
+	background-image: url('/images/drawer-image1.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}

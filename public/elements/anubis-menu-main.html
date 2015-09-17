@@ -14,14 +14,8 @@
     <paper-item proute="1">General Guidelines</paper-item>
     <paper-submenu>
       <paper-item class="menu-trigger">
-        <paper-icon-item>
-          <div item-icon></div>
-          <div class="flex">Alphonso</div>
+          <span class="flex">Completing Parts 1&2</span>
           <iron-icon icon="expand-more"></iron-icon>
-        </paper-icon-item>
-
-        <!--     Completing Parts 1&2
-          <iron-icon icon="expand-more"></iron-icon> -->
       </paper-item>
       <paper-menu class="menu-content sublist" id="menu21"  attr-for-selected="proute" selected="{{pageSelected21}}">
         <paper-item proute="4.1">Part 1</paper-item>
@@ -29,10 +23,16 @@
       </paper-menu>
     </paper-submenu>
     <paper-submenu>
-      <paper-item class="menu-trigger">Certification Examples</paper-item>
+      <paper-item class="menu-trigger">
+        <span class="flex">Certification Examples</span>
+        <iron-icon icon="expand-more"></iron-icon>
+      </paper-item>
       <paper-menu class="menu-content sublist" id="menu22"  attr-for-selected="proute" selected="{{pageSelected22}}">
         <paper-submenu>
-          <paper-item class="menu-trigger">Good</paper-item>
+        <paper-item class="menu-trigger">
+          <span class="flex">Good</span>
+        <iron-icon icon="expand-more"></iron-icon>
+        </paper-item>
           <paper-menu class="menu-content sublist" id="menu31" attr-for-selected="proute" selected="{{pageSelected31}}">
             <paper-item proute="5.3.1">5.3.1</paper-item>
             <paper-item proute="5.3.2">5.3.2</paper-item>
@@ -40,7 +40,10 @@
           </paper-menu>
         </paper-submenu>
         <paper-submenu>
-          <paper-item class="menu-trigger">Bad</paper-item>
+          <paper-item class="menu-trigger">
+          <span class="flex">Bad</span>
+        <iron-icon icon="expand-more"></iron-icon>
+        </paper-item>
           <paper-menu class="menu-content sublist" id="menu31" attr-for-selected="proute" selected="{{pageSelected31}}">
             <paper-item proute="5.3.1">5.3.1</paper-item>
             <paper-item proute="5.3.2">5.3.2</paper-item>
@@ -50,13 +53,19 @@
       </paper-menu>
     </paper-submenu>
     <paper-submenu>
-      <paper-item class="menu-trigger">Common Problems</paper-item>
+      <paper-item class="menu-trigger">
+          <span class="flex">Common Problems</span>
+        <iron-icon icon="expand-more"></iron-icon>
+        </paper-item>
       <paper-menu class="menu-content sublist" id="menu22"  attr-for-selected="proute" selected="{{pageSelected22}}">
         <paper-item proute="4.1">Uncertainty</paper-item>
         <paper-item proute="4.1">Advanced Age</paper-item>
         <paper-item proute="4.1">Infants</paper-item>
         <paper-submenu>
-          <paper-item class="menu-trigger">Diseases</paper-item>
+          <paper-item class="menu-trigger">
+          <span class="flex">Disease</span>
+        <iron-icon icon="expand-more"></iron-icon>
+        </paper-item>
           <paper-menu class="menu-content sublist" id="menu31" attr-for-selected="proute" selected="{{pageSelected31}}">
             <paper-item proute="5.3.1">Abscess</paper-item>
             <paper-item proute="5.3.2">Abdominal Hemorrhage</paper-item>

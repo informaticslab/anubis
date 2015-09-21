@@ -1,5 +1,5 @@
 .main-page{
-	padding:10px;
+	padding:20px;
 }
 
 .splash {
@@ -13,4 +13,17 @@ paper-toolbar#drawerToolbar{
 	background-image: url('/images/drawer-image1.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+hr.hr{height: 3px;
+    border: 0;
+    background-color: #f37018;
+}
+
+.section-title{
+display: block;
+font-family: RobotoDraft, Roboto, sans-serif;
+font-size: 24px;
+font-weight: normal;
+
 }

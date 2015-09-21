@@ -1,5 +1,5 @@
 console.log("load index");
-window.setTimeout(loadApp,5000);
+window.setTimeout(loadApp,1);
 
 var app=document.querySelector('#app');
 
@@ -7,32 +7,33 @@ var app=document.querySelector('#app');
 
 
 
-app.closeDrawer = function(){
-	console.log("selected");
-	this.$.mainDrawer.closeDrawer();
-}
+// app.closeDrawer = function(){
+// 	console.log("selected");
+// 	this.$.mainDrawer.closeDrawer();
+// }
 
-app.changepage=function(){
-  this.$.mypages.selectNext();
-}
+// app.changepage=function(){
+//   this.$.mypages.selectNext();
+// }
 
 
-app.page = "faqs";
+app.page = "aboutus";
 app.loadAppFlag=0;
+app.moremenu=["About this app","Help & FAQ","Contact"];
 
 
-app._onPrevClick = function() {
-this.$.pages.entryAnimation = 'fade-in-animation';
-this.$.pages.exitAnimation = 'fade-out-animation';
-this.$.pages.selected = this.$.pages.selected === 0 ? 2 : (this.$.pages.selected - 1);
-}
+// app._onPrevClick = function() {
+// this.$.pages.entryAnimation = 'fade-in-animation';
+// this.$.pages.exitAnimation = 'fade-out-animation';
+// this.$.pages.selected = this.$.pages.selected === 0 ? 2 : (this.$.pages.selected - 1);
+// }
 
-app._onNextClick = function() {
-	console.log("next");
-this.$.pages.entryAnimation = 'fade-in-animation';
-this.$.pages.exitAnimation = 'fade-out-animation';
-this.$.pages.selected = this.$.pages.selected === 2 ? 0 : (this.$.pages.selected + 1);
-}
+// app._onNextClick = function() {
+// 	console.log("next");
+// this.$.pages.entryAnimation = 'fade-in-animation';
+// this.$.pages.exitAnimation = 'fade-out-animation';
+// this.$.pages.selected = this.$.pages.selected === 2 ? 0 : (this.$.pages.selected + 1);
+// }
 
 window.addEventListener('WebComponentsReady', function() {
 // Explicitly call the register() method. We need to wait until the template's variables are
@@ -53,12 +54,11 @@ app.displayErrorToast = function(ss) {
   document.querySelector('#caching-incomplete').show();
 };
 
-app.fired = function(ss) {
-	console.log("fired",ss);
-};
+// app.fired = function(ss) {
+// 	console.log("fired",ss);
+// };
 
 function loadApp()
 {
-
 app.loadAppFlag=1;
 }

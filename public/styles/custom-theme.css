@@ -85,7 +85,4 @@ section.hero paper-menu, section[hero] paper-menu { --paper-menu-background-colo
 
 paper-tabs { background-color: #f37018; color: #ffffff; }
 
-hr.hr{height: 10px;
-    border: 0;
-    box-shadow: 0 10px 10px -10px #8c8b8b inset;}
 </style>

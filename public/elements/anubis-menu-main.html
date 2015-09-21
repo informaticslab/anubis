@@ -12,17 +12,18 @@
   </style>
   <paper-menu id="menu11" attr-for-selected="proute" selected="{{pageSelected1}}" >
     <paper-item proute="1">General Guidelines</paper-item>
+    <hr class="hr-menu">
     <paper-submenu>
       <paper-item class="menu-trigger">
           <span class="flex">Completing Parts 1&2</span>
           <iron-icon icon="expand-more"></iron-icon>
       </paper-item>
-      <hr/>
       <paper-menu class="menu-content sublist" id="menu21"  attr-for-selected="proute" selected="{{pageSelected21}}">
         <paper-item proute="part1">Part 1</paper-item>
         <paper-item proute="4.2">Part 2</paper-item>
       </paper-menu>
     </paper-submenu>
+    <hr class="hr-menu">
     <paper-submenu>
       <paper-item class="menu-trigger">
         <span class="flex">Certification Examples</span>

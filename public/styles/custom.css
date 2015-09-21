@@ -12,7 +12,8 @@
 paper-toolbar#drawerToolbar{
 	background-image: url('/images/drawer-image1.jpg');
 	background-repeat: no-repeat;
-	background-size: contain;
+	/*background-size: contain;*/
+	height: 145px;
 }
 
 hr.hr{height: 3px;
@@ -25,5 +26,10 @@ display: block;
 font-family: RobotoDraft, Roboto, sans-serif;
 font-size: 24px;
 font-weight: normal;
-
+}
+.hr-menu {
+	color:#eee; 
+	margin:0px; 
+	padding:0px; 
+	border:1px solid;
 }

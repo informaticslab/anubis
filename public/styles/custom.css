@@ -1,4 +1,4 @@
-.main-page{
+.page-container{
 	padding:20px;
 }
 
@@ -9,6 +9,11 @@
   background-position: 50%;
   background-image: url(/images/splash.svg);*/
 }
+
+#drawer{
+background-color: #fafafa;
+}
+
 paper-toolbar#drawerToolbar{
 	background-image: url('/images/drawer-image1.jpg');
 	background-repeat: no-repeat;

@@ -17,7 +17,7 @@ html
             | Death Certificate Quick Guide
         neon-animatable
           paper-drawer-panel(id="mainDrawer")
-            paper-header-panel(drawer mode="waterfall-tall")
+            paper-header-panel(id="drawer" drawer mode="waterfall-tall")
               // Drawer Toolbar
               paper-toolbar(id="drawerToolbar" style)
                 .flex
@@ -47,7 +47,7 @@ html
               //-   | {{page}}
               //- span
               //-   | --
-              div.main-page
+              div
                 iron-pages(id="pages" class="flex" selected="{{page}}" attr-for-selected="page-route")
                   anubis-guidelines(page-route="guidelines")
                   anubis-examples(page-route="examples")

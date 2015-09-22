@@ -21,12 +21,32 @@ hr.hr{height: 3px;
     background-color: #f37018;
 }
 
+.page-title{
+display: block;
+font-family: RobotoDraft, Roboto, sans-serif;
+font-size: 29px;
+font-weight: 200;
+height:50;
+margin-top: 10px;
+margin-bottom: 20px;
+}
+
 .section-title{
 display: block;
 font-family: RobotoDraft, Roboto, sans-serif;
 font-size: 24px;
-font-weight: normal;
+font-weight: 200;
+margin-top: 30px;
 }
+
+.section-paragraph{
+display: block;
+font-family: RobotoDraft, Roboto, sans-serif;
+font-size: 19px;
+font-weight: 100;
+margin-top: 10px;
+}
+
 .hr-menu {
 	color:#eee; 
 	margin:0px; 

@@ -1,4 +1,3 @@
-<style is="custom-style">
 /*
  * PolymerThemes v1.0.3
  * Homepage: https://polymerthemes.com
@@ -84,5 +83,3 @@ paper-fab[disabled] { color: #656565 !important; background: #e4e4e4 !important;
 section.hero paper-menu, section[hero] paper-menu { --paper-menu-background-color: #fafafa; }
 
 paper-tabs { background-color: #f37018; color: #ffffff; }
-
-</style>

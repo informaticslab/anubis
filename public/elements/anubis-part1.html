@@ -1,11 +1,21 @@
 <dom-module id="anubis-part1">
 <link rel="import" href="/styles/custom-theme.css" type="css">
 	<template>
-				<paper-tabs selected="0">
-			<paper-tab>PURPOSE</paper-tab>
-			<paper-tab>INSTRUCTION</paper-tab>
-
+				<paper-tabs  attr-for-selected="tabselected" selected="{{tabsel}}">
+			<paper-tab tabselected="purpose">PURPOSE</paper-tab>
+			<paper-tab tabselected="instruction">INSTRUCTION</paper-tab>
     </paper-tabs>
+    <iron-pages id="pages" class="flex" selected="{{tabsel}}" attr-for-selected="tab-route">
+    	<div tab-route="purpose">
+    		<div class="anchor-list">
+    			<div class="anchor-list-item">General</div>
+    			<div>Line (a)</div>
+    			<div>Line (b), (c),( d)</div>
+    			<div>Onset to Death Interval</div>
+    		</div>
+    	</div>
+    	<div tab-route="instruction">instr</div>
+    <iron-pages>
 		<div class="page-container">
 
   </div>
@@ -13,7 +23,13 @@
 </dom-module>
 <script>
 Polymer({
-	is:"anubis-part1"
+	is:"anubis-part1",
+	properties: {
+      tabsel: {
+          type: String,
+          value: "purpose"
+        }
+  }
 
 });
 

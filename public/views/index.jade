@@ -27,11 +27,11 @@ html
               anubis-menu-main(menu-selected="{{page}}")
             paper-header-panel(main mode="waterfall")
               paper-toolbar
-                paper-icon-button(icon='menu', paper-drawer-toggle='')
+                paper-icon-button(id="menu-icon" icon='menu', paper-drawer-toggle='')
                 div Death Certification Quick Guide
                 .flex
                 //paper-icon-button(icon="icons:more-vert" )
-                paper-menu-button(vertical-align="top" horizontal-align="right" )
+                paper-menu-button(id="more-menu" vertical-align="top" horizontal-align="right" )
                   paper-icon-button(icon="icons:more-vert" class="dropdown-trigger")
                   paper-menu(class="dropdown-content")
                     paper-item About

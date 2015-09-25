@@ -9,7 +9,7 @@ html
     link(rel='import', href='/includes/elements.html')
     link(rel="stylesheet" href="/styles/custom.css")
     link(rel='import', href='/styles/custom-theme.html')
-  body(unresolved class="fullbleed layout vertical")
+  body(class="fullbleed layout vertical")
     template#app(is='dom-bind')
       neon-animated-pages(id="pages" class="flex" selected="{{loadAppFlag}}" entry-animation="fade-in-animation" exit-animation="fade-out-animation")
         neon-animatable.splash

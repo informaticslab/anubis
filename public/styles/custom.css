@@ -77,3 +77,8 @@ padding:0;
 paper-icon-button#menu-icon{
 padding:0;
 }
+
+.partstable{
+	text-align: center;
+	font-style: italic;
+}

@@ -1,24 +1,89 @@
 <dom-module id="anubis-part1">
 <link rel="import" href="/styles/custom-theme.css" type="css">
 	<template>
+    <div class="page-container">
+    <!--<style include="custom-styles"></style>-->
+    <span class="page-title">Part I of the cause of death section</span>
+    <hr class="hr"/>
+    <span class="section-title">Purpose</span>
+    <span class="section-paragraph">
 
-  <paper-tabs selected="{{selected}}">
-    <paper-tab>PURPOSE</paper-tab>
-    <paper-tab>INSTRUCTION</paper-tab>
-  </paper-tabs>
+<p>      Only one cause is to be entered on each line of Part I. Additional lines
+should be added between the printed lines when necessary. For each
+cause, indicate in the space provided the approximate interval between the
+date of onset (not necessarily the date of diagnosis) and the date of death.
+For clarity, do not use parenthetical statements and abbreviations when
+reporting the cause of death. The underlying cause of death should be
+entered on the LOWEST LINE USED IN PART I. The underlying cause of
+death is the disease or injury that started the sequence of events leading
+directly to death or the circumstances of the accident or violence that
+produced the fatal injury. In the case of a violent death, the form of
+external violence or accident is antecedent to an injury entered, although
+the two events may be almost simultaneous.
+</p>
+<b>
+Line (a) immediate cause</b>
+<p>
+In Part I, the immediate cause of death is reported on line (a). This is the
+final disease, injury, or complication directly causing the death. An immediate
+cause of death must always be reported on line (a). It can be the sole
+entry in the cause-of-death section if that condition is the only condition
+causing the death.
+</p>
+<p>
+The immediate cause does not mean the mechanism of death or terminal
+event (for example, cardiac arrest or respiratory arrest). The mechanism of
+death (for example, cardiac or respiratory arrest) should not be reported as
+the immediate cause of death as it is a statement not specifically related to
+the disease process, and it merely attests to the fact of death. Therefore,
+the mechanism of death provides no additional information on the cause
+of death.
+</p>
 
-<iron-pages selected="{{selected}}">
-  <div>
-    <div class="anchor-list">
-        <h1>Contents</h1>
-        <ul>
-          <li>Goals</li>
-          <li>Principles</li>
-        </ul>
-    </div>
-  </div>
-  <div>Page 2</div>
-</iron-pages>
+<b>Lines (b), (c), and (d) due to (or as a consequence of)</b>
+<p>
+On line (b) report the disease, injury, or complication, if any, that gave rise
+to the immediate cause of death reported on line (a). If this in turn resulted
+from a further condition, record that condition on line (c). If this in turn
+resulted from a further condition, record that condition on line (d). For as
+many conditions as are involved, write the full sequence, one condition per
+line, with the most recent condition at the top, and the underlying cause of
+death reported on the lowest line used in Part I. If more than four lines are
+needed, add additional lines (writing ‘‘due to’’ between conditions on the
+same line is the same as drawing an additional line) rather than using
+space in Part II to continue the sequence. The following certification is an
+example in which an additional line was necessary.
+</p>
+<p>
+The words ‘‘due to (or as a consequence of),’’ which are printed between the
+lines of Part I, apply not only in sequences with an etiological or pathological
+basis and usually a chronological time ordering, but also to sequences
+in which an antecedent condition is believed to have prepared the way for
+a subsequent cause by damage to tissues or impairment of function.
+If the immediate cause of death arose as a complication of or from an error
+or accident in surgery or other medical procedure or treatment, it is
+important to report what condition was being treated, what medical procedure
+was performed, what the complication or error was, and what the
+result of the complication or error was.
+</p>
+<b>Approximate interval between onset and death</b>
+<p>
+Space is provided to the right of lines (a), (b), (c), and (d) for recording the
+interval between the presumed onset of the condition (not the diagnosis of
+the condition) and the date of death. This should be entered for all conditions
+in Part I. These intervals usually are established by the physician on
+the basis of available information. In some cases the interval will have to
+be estimated. The terms ‘‘unknown’’ or ‘‘approximately’’ may be used.
+General terms, such as minutes, hours, or days, are acceptable, if necessary.
+If the time of onset is entirely unknown, state that the interval is
+‘‘Unknown.’’ Do not leave these items blank.
+</p>
+<p>
+This information is useful in coding certain diseases and also provides a
+useful check on the accuracy of the reported sequence of conditions.
+</p>
+    </span>
+</div>
 	</template>
 </dom-module>
 <script>

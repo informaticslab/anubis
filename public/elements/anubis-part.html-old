@@ -1,0 +1,37 @@
+<dom-module id="anubis-part1">
+<link rel="import" href="/styles/custom-theme.css" type="css">
+	<template>
+
+  <paper-tabs selected="{{selected}}">
+    <paper-tab>PURPOSE</paper-tab>
+    <paper-tab>INSTRUCTION</paper-tab>
+  </paper-tabs>
+
+<iron-pages selected="{{selected}}">
+  <div>
+    <div class="anchor-list">
+        <h1>Contents</h1>
+        <ul>
+          <li>Goals</li>
+          <li>Principles</li>
+        </ul>
+    </div>
+  </div>
+  <div>Page 2</div>
+</iron-pages>
+	</template>
+</dom-module>
+<script>
+console.log("part 1");
+Polymer({
+	is:"anubis-part1",
+	properties: {
+      selected: {
+          type: String,
+          value: 0
+        }
+  }
+
+});
+
+</script>

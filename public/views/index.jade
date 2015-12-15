@@ -48,7 +48,7 @@ html
               //- span
               //-   | --
               div
-                iron-pages(id="pages" class="flex" selected="{{page}}" attr-for-selected="page-route")
+                neon-animated-pages(id="pages" class="flex" selected="{{page}}" attr-for-selected="page-route" entry-animation="fade-in-animation" exit-animation="fade-out-animation")
                   anubis-guidelines(page-route="guidelines")
                   anubis-examples(page-route="examples")
                   anubis-faqs(page-route="faqs")

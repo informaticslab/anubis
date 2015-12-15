@@ -1,5 +1,5 @@
 console.log("load index");
-window.setTimeout(loadApp,1);
+//window.setTimeout(loadApp,1);
 
 var app=document.querySelector('#app');
 
@@ -18,7 +18,7 @@ var app=document.querySelector('#app');
 
 
 app.page = "aboutus";
-app.loadAppFlag=0;
+app.loadAppFlag=1;
 app.moremenu=["About this app","Help & FAQ","Contact"];
 
 
@@ -35,12 +35,12 @@ app.moremenu=["About this app","Help & FAQ","Contact"];
 // this.$.pages.selected = this.$.pages.selected === 2 ? 0 : (this.$.pages.selected + 1);
 // }
 
-// window.addEventListener('WebComponentsReady', function() {
-// // Explicitly call the register() method. We need to wait until the template's variables are
-// // all set first, since the configuration depends on bound variables.
-// document.querySelector('platinum-sw-register').register();
-// console.log("registered");
-// });
+window.addEventListener('WebComponentsReady', function() {
+// Explicitly call the register() method. We need to wait until the template's variables are
+// all set first, since the configuration depends on bound variables.
+document.querySelector('platinum-sw-register').register();
+console.log("registered");
+});
 
 
 app.displayInstalledToast = function() {

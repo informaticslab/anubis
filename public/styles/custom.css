@@ -82,3 +82,11 @@ padding:0;
 	text-align: center;
 	font-style: italic;
 }
+
+img.container{
+	display:block;
+	width:100%;
+	max-width:800px;
+	height:auto;
+	margin: auto;
+}

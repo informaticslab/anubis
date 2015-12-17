@@ -1,5 +1,6 @@
 <dom-module id="anubis-guidelines">
 	<template>
+		<neon-animated-pages id="gpages" selected="0" entry-animation="scale-up-animation" exit-animation="scale-down-animation">
 		<div class="page-container">
 		<!--<style include="custom-styles"></style>-->
 		<span class="page-title">Guidelines</span>
@@ -99,7 +100,7 @@ as to why it developed. For example, sepsis is not specific because a
 number of different conditions may have resulted in sepsis, whereas human
 immunodeficiency virus syndrome is specific.
 </p>
-	<img class="container" src="/images/image1.png"/>
+	<img on-click="pagetrans" class="container" src="/images/image1.png"/>
 <p>
 In certifying the cause of death, any disease, abnormality, injury, or poisoning,
 if believed to have adversely affected the decedent, should be
@@ -207,13 +208,29 @@ function (for example, air embolism) that contributed to death.
 </p>
 		</span>
 </div>
-
+<div>
+	<paper-card>
+	      <div class="card-content">
+				<img style="margin:0;width:100%; " src="/images/image1.png" on-click="back"/>
+	      </div>
+	 </paper-card>
+</div>
+</neon-animated-pages>
 	</template>
 </dom-module>
 <script>
 Polymer({
-	is:"anubis-guidelines"
+	is:"anubis-guidelines",
+	pagetrans: function() {
+		console.log("page trans");
+    	this.$.gpages.selected = 1;
+  	},
+  	back: function() {
+		console.log("page trans");
+    	this.$.gpages.selected = 0;
+  	}
 
 });
 
+        
 </script>

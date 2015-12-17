@@ -101,7 +101,7 @@ immunodeficiency virus syndrome is specific.
 </p>
 	<img class="container" src="/images/image1.png" on-click="openDialog"/>
 <p>
-<simple-overlay id="backdrop" with-backdrop>
+<simple-overlay on-iron-overlay-opened="patchOverlay" id="backdrop" with-backdrop>
 	<img style="width:100%" src="/images/image1.png"/>
 </simple-overlay>
 In certifying the cause of death, any disease, abnormality, injury, or poisoning,
@@ -221,7 +221,12 @@ Polymer({
         if (dialog) {
           dialog.open();
         }
-	}
+	},
+	patchOverlay: function (e) {
+  		if (e.target.withBackdrop) {
+    	e.target.parentNode.insertBefore(e.target._backdrop, e.target);
+  }
+},
 
 });
 

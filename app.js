@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
-
+var compression = require('compression');
 var path = require('path');
 var rootPath = path.normalize(__dirname + '/');
 
-
+app.use(compression());
 
 app.set('views', rootPath+'/public/views')
 app.set('view engine','jade');

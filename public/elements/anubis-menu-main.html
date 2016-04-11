@@ -20,14 +20,38 @@
 
   </style>
   <paper-menu id="menu11" attr-for-selected="proute" selected="{{pageSelected1}}" >
-    <paper-item proute="guidelines">General Guidelines</paper-item>
+    <!-- <paper-item proute="guidelines">General Guidelines</paper-item>
+    <hr class="hr-menu"> -->
+    <paper-submenu>
+      <paper-item class="menu-trigger">
+          <span class="flex">Introduction</span>
+          <iron-icon icon="expand-more"></iron-icon>
+      </paper-item>
+      <paper-menu class="menu-content sublist" id="menu21"  attr-for-selected="proute" selected="{{pageSelected21}}">
+        <paper-item proute="purpose">Purpose</paper-item>
+        <paper-item proute="importance">Importance</paper-item>
+      </paper-menu>
+    </paper-submenu>
+    <hr class="hr-menu">
+    <paper-submenu>
+      <paper-item class="menu-trigger">
+          <span class="flex">Guidelines</span>
+          <iron-icon icon="expand-more"></iron-icon>
+      </paper-item>
+      <paper-menu class="menu-content sublist" id="menu22"  attr-for-selected="proute" selected="{{pageSelected22}}">
+        <paper-item proute="gi">General Instructions</paper-item>
+        <paper-item proute="mcod">Medical Certification of Death</paper-item>
+      </paper-menu>
+    </paper-submenu>
+    <hr class="hr-menu">
+    <paper-item proute="certify">Certifying Cause of Death</paper-item>
     <hr class="hr-menu">
     <paper-submenu>
       <paper-item class="menu-trigger">
           <span class="flex">Completing Parts I and II</span>
           <iron-icon icon="expand-more"></iron-icon>
       </paper-item>
-      <paper-menu class="menu-content sublist" id="menu21"  attr-for-selected="proute" selected="{{pageSelected21}}">
+      <paper-menu class="menu-content sublist" id="menu23"  attr-for-selected="proute" selected="{{pageSelected23}}">
         <paper-item proute="part1">Part I</paper-item>
         <paper-item proute="part2">Part II</paper-item>
       </paper-menu>
@@ -35,10 +59,40 @@
     <hr class="hr-menu">
     <paper-submenu>
       <paper-item class="menu-trigger">
+          <span class="flex">Common Problems</span>
+          <iron-icon icon="expand-more"></iron-icon>
+      </paper-item>
+      <paper-menu class="menu-content sublist" id="menu24"  attr-for-selected="proute" selected="{{pageSelected24}}">
+        <paper-item proute="pu">Uncertainty</paper-item>
+        <paper-item proute="paa">Advanced Age</paper-item>
+        <paper-item proute="pinf">Infants</paper-item>
+        <paper-item proute="paamb">Avoiding Ambiguity</paper-item>
+        <paper-item proute="punc">Potential Unnatural Causes</paper-item>
+      </paper-menu>
+    </paper-submenu>
+    <hr class="hr-menu">
+    <paper-submenu>
+      <paper-item class="menu-trigger">
+          <span class="flex">Completing the Rest of the Cause of Death Section</span>
+          <iron-icon icon="expand-more"></iron-icon>
+      </paper-item>
+      <paper-menu class="menu-content sublist" id="menu25"  attr-for-selected="proute" selected="{{pageSelected25}}">
+        <paper-item proute="part1">Autopsy</paper-item>
+        <paper-item proute="part2">Tobacco Use</paper-item>
+        <paper-item proute="part2">Pregnancy</paper-item>
+        <paper-item proute="part2">Manner of Death</paper-item>
+        <paper-item proute="part2">Injury or Poisoning</paper-item>
+      </paper-menu>
+    </paper-submenu>
+    <hr class="hr-menu">
+    <paper-item proute="guidelines">Changes to Cause of Death</paper-item>
+    <hr class="hr-menu">
+    <paper-submenu>
+      <paper-item class="menu-trigger">
           <span class="flex">Examples</span>
           <iron-icon icon="expand-more"></iron-icon>
       </paper-item>
-      <paper-menu class="menu-content sublist" id="menu23"  attr-for-selected="proute" selected="{{pageSelected23}}">
+      <paper-menu class="menu-content sublist" id="menu26"  attr-for-selected="proute" selected="{{pageSelected26}}">
         <paper-item proute="ch1">48-year-old Male with Cramping</paper-item>
         <paper-item proute="ch2">68-year-old Male with Progressive Lower Quadrant Pain</paper-item>
         <paper-item proute="ch3">75-year-old Male Complaining of Severe Chest Pain</paper-item>
@@ -55,6 +109,10 @@
       </paper-menu>
     </paper-submenu>
     <hr class="hr-menu">
+    <paper-item proute="guidelines">Other Instructions</paper-item>
+    <hr class="hr-menu">
+    <paper-item proute="guidelines">Additional Resources</paper-item>
+    <hr class="hr-menu">        
     <!-- <paper-submenu>
       <paper-item class="menu-trigger">
         <span class="flex">Certification Examples</span>
@@ -111,7 +169,7 @@
       </paper-menu>
     </paper-submenu>
     <hr class="hr-menu"> -->
-    <paper-submenu>
+<!--     <paper-submenu>
       <paper-item class="menu-trigger">
           <span class="flex">Common Problems</span>
         <iron-icon icon="expand-more"></iron-icon>
@@ -123,12 +181,12 @@
         <paper-item proute="pcs">Complex Situations</paper-item>
       </paper-menu>
     </paper-submenu>
-    <!-- <hr class="hr-menu">
-    <paper-item proute="6">Tips/Tricks</paper-item> -->
+    <hr class="hr-menu">
+    <paper-item proute="6">Tips/Tricks</paper-item>
     <hr class="hr-menu">
     <paper-item proute="addresource">Additional Resources</paper-item>
     <hr class="hr-menu">
-    <!-- <paper-item proute="3">FAQ</paper-item> -->
+    <paper-item proute="3">FAQ</paper-item> -->
   </paper-menu>
 
   </template>
@@ -159,6 +217,21 @@
           //notify: true
         },
       pageSelected23: {
+          type: String,
+          observer: '_pageSelectedChanged',
+          //notify: true
+        },
+      pageSelected24: {
+          type: String,
+          observer: '_pageSelectedChanged',
+          //notify: true
+        },
+      pageSelected25: {
+          type: String,
+          observer: '_pageSelectedChanged',
+          //notify: true
+        },
+      pageSelected26: {
           type: String,
           observer: '_pageSelectedChanged',
           //notify: true
@@ -207,6 +280,18 @@
       if(this.$.menu23.selected!=this.menuSelected)
       {
         this.$.menu23.selected=null
+      }
+      if(this.$.menu24.selected!=this.menuSelected)
+      {
+        this.$.menu24.selected=null
+      }
+      if(this.$.menu25.selected!=this.menuSelected)
+      {
+        this.$.menu25.selected=null
+      }
+      if(this.$.menu26.selected!=this.menuSelected)
+      {
+        this.$.menu26.selected=null
       }
       // if(this.$.menu31.selected!=this.menuSelected)
       // {

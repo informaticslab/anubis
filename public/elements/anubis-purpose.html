@@ -1,0 +1,29 @@
+<dom-module id="anubis-purpose">
+<link rel="import" href="/styles/custom-theme.css" type="css">
+	<template>
+    <div class="page-container">
+    <!--<style include="custom-styles"></style>-->
+    <span class="page-title">Purpose</span>
+    <hr class="hr"/>
+    <span class="section-title">Welcome!</span>
+    <span class="section-paragraph">
+      <p>This app is designed to acquaint physicians, medical students, and others with the vital registration system in the United States and to provide instructions for completing and filing death certificates. Emphasis is directed toward the certification of medical information, the primary responsibility of the physician, and a critical piece of information on the death certificate.
+      </p>
+    </span>
+</div>
+	</template>
+</dom-module>
+<script>
+console.log("part 1");
+Polymer({
+	is:"anubis-purpose",
+	properties: {
+      selected: {
+          type: String,
+          value: 0
+        }
+  }
+
+});
+
+</script>

@@ -1,0 +1,63 @@
+<dom-module id="anubis-mcod">
+	<template>
+		<div class="page-container">
+		<!--<style include="custom-styles"></style>-->
+		<span class="page-title">Medical Certifocation of Death</span>
+		<hr class="hr"/>
+		<span class="section-title">Medical Certification of Death</span>
+		<span class="section-paragraph">
+			<p>The medical part of the death certificate includes 2 major parts:
+			</p>
+			<p>
+				<b>Pronunciation of death</b>
+			</p>
+			<ul>
+			<li>Date and time pronounced dead</li>
+			<li>Pronouncing physician information</li>
+			<li>Date and time of death</li>
+			<li>Whether the case was referred to the medical examiner or coroner</li>
+			</ul>
+			<p>
+			<b>Certification of cause of death:</b> 
+			</p>
+			<ul>
+			<li>Direct cause of death</li>
+			<li>Other significant conditions contributing to death</li>
+			<li>If female, pregnancy status</li>
+			<li>Manner of death</li>
+			<li>For cases involving injuries:</li>
+				<ul>
+					<li>Date of injury</li>
+					<li>Time of injury</li>
+					<li>Place of injury</li>
+					<li>How injury occured</li>
+				</ul>
+			<li>Certifier information and signature</li>
+			</ul>
+			<p>
+				In most cases, an attending physician will both pronounce death and certify or report the cause of death. When the attending physician is unavailable to certify the cause of death at the time of death, and if State law provides for this option, another physician may certify the cause of death. If an inquiry is required by a State Post-Mortem Examinations Act, a medical examiner or coroner is responsible for determining the cause of death.
+			</p>
+		</span>
+
+		</div>
+
+	</template>
+</dom-module>
+<script>
+Polymer({
+	is:"anubis-mcod",
+	openDialog: function(){
+        var dialog = document.getElementById("backdrop");
+        if (dialog) {
+          dialog.open();
+        }
+	},
+	patchOverlay: function (e) {
+  		if (e.target.withBackdrop) {
+    	e.target.parentNode.insertBefore(e.target._backdrop, e.target);
+  }
+},
+
+});
+
+</script>

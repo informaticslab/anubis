@@ -94,3 +94,8 @@ img.container{
 	height:auto;
 	margin: auto;
 }
+
+iron-dropdown#dropdown{
+	top:12px;
+	right:16px;
+}

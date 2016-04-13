@@ -17,7 +17,7 @@ var app=document.querySelector('#app');
 // }
 
 
-app.page = "purpose";
+app.page = "welcome";
 app.loadAppFlag=1;
 app.moremenu=["About this app","Help & FAQ","Contact"];
 

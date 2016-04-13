@@ -78,6 +78,10 @@ paper-icon-button#menu-icon{
 padding:0;
 }
 
+paper-menu{
+	cursor: pointer;
+}
+
 .partstable{
 	text-align: center;
 	font-style: italic;

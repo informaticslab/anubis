@@ -15,7 +15,31 @@
       padding-top: 10px;
     }
 
+    paper-item>span{
+      cursor: default;
+    }
 
+    paper-item{
+      cursor: pointer;
+    }
+
+    paper-item.menu-trigger{
+      cursor: default;
+    }
+
+
+    paper-menu {
+      --paper-menu-focused-item-after: {
+        background-color: rgb(250, 250, 250);
+        opacity: 0;
+      };
+
+    }
+
+    .paper-item-0:focus:before {
+      background-color: rgb(250, 250, 250);
+      opacity: 0;
+    }
 
 
   </style>

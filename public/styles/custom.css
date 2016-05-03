@@ -96,3 +96,12 @@ iron-dropdown#dropdown{
 	top:12px;
 	right:16px;
 }
+
+    paper-dialog.textPopup {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      width: 300px;
+      height: 300px;
+      overflow: auto;
+    }

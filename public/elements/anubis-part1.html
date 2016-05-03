@@ -8,7 +8,7 @@
     <span class="section-title">Direct Cause of Death</span>
     <span class="section-paragraph">
 
-<p> Only one cause is to be entered on each line of Part I. Additional lines should be added between the printed lines when necessary. For clarity, do not use parenthetical statements and abbreviations when reporting the cause of death. The underlying cause of death should be entered on the lowest line used in Part 1. The underlying cause of death is the disease or injury that started the sequence of events leading directly to death or the circumstances of the accident or violence that produced the fatal injury. In the case of a violent death, the form of external violence or accident is antecedent to an injury entered, although the two events may be almost simultaneous.
+<p>Only one cause is to be entered on each line of <b>Part I</b>, which is displayed below. Additional lines should be added between the printed lines when necessary. For clarity, do not use parenthetical statements and abbreviations when reporting the cause of death. The <b>underlying cause of death</b> should be entered on the <b>lowest line used in Part 1</b>. The underlying cause of death is the disease or injury that started the sequence of events leading directly to death or the circumstances of the accident or violence that produced the fatal injury. In the case of a violent death, the form of external violence or accident is antecedent to an injury entered, although the two events may be almost simultaneous. 
 </p>
       <p>
         <img class="container" src="/images/image1.png" on-click="openDialog"/>
@@ -21,31 +21,40 @@
 Line (a) immediate cause</b>
 </p>
 <p>
-In Part I, the immediate cause of death is reported on line (a). This is the final disease, injury, or complication directly causing the death. An immediate cause of death must always be reported on line (a). It can be the sole entry in the cause of death section if that condition is the only condition causing the death.
+In Part I, the immediate cause of death is reported on line (a). This is the final disease, injury, or complication directly causing the death. In other words, it is the condition that directly preceded and led to the cardiac or respiratory arrest in the decedent. An immediate cause of death must always be reported on line (a). It can be the sole entry in the cause of death section if that condition is the only condition causing the death.
 </p>
 <p>
-The <i>mechanism</i> of death (for example, cardiac or respiratory arrest) should NOT be reported as the immediate cause of death as it is a statement not specifically related to the disease process, and it merely attests to the <i>condition</i> or <i>fact</i> of death. Therefore, the mechanism of death provides no additional information on the cause of death.
+The <i>mechanism</i> of death (for example, cardiac or respiratory arrest) should NOT be reported as the immediate cause of death as it is a statement not specifically related to the disease process, and it merely attests to the <i>condition</i> or <i>fact</i> of death. Therefore, the mechanism of death provides no additional information on the <i>cause</i> of death.
 </p>
 <p>
 <b>Lines (b), (c), and (d) due to (or as a consequence of)</b>
 </p>
 <p>
-On line (b) report the disease, injury, or complication, if any, that gave rise to the immediate cause of death reported on line (a). If this in turn resulted from a further condition, record that condition on line (c). If this in turn resulted from a further condition, record that condition on line (d). For as many conditions as are involved, write the full sequence, one condition per line, with the most recent condition at the top, and the underlying cause of death reported on the lowest line used in Part I. If more than four lines are needed, add additional lines (writing ‘‘due to’’ between conditions on the same line is the same as drawing an additional line) rather than using space in Part II to continue the sequence. The following certification is an example in which an additional line was necessary. 
+On line (b) report the disease, injury, or complication, if any, that gave rise to the immediate cause of death reported on line (a). If this in turn resulted from a further condition, record that condition on line (c). If this in turn resulted from a further condition, record that condition on line (d). For as many conditions as are involved, write the full sequence, one condition per line, with the most recent condition at the top, and the underlying cause of death reported on the lowest line used in Part I. If more than four lines are needed, writing ‘‘due to’’ between conditions on the same line is the same as drawing an additional line and is acceptable. Do NOT use the space in Part II to continue the sequence in Part I.
 </p>
 <p>
-The words ‘‘due to (or as a consequence of),’’ which are printed between the lines of Part I, apply not only in sequences with an etiological or pathological basis and usually a chronological time ordering, but also to sequences in which an antecedent condition is believed to have prepared the way for a subsequent cause by damage to tissues or impairment of function. If the immediate cause of death arose as a complication of or from an error or accident in surgery or other medical procedure or treatment, it is important to report what condition was being treated, what medical procedure was performed, what the complication or error was, and what the result of the complication or error was.
+The words "due to (or as a consequence of),"" which are printed between the lines of Part I, apply not only in sequences with an etiological or pathological basis and usually a chronological time ordering, but also to sequences in which an antecedent condition is believed to have prepared the way for a subsequent cause by damage to tissues or impairment of function. If the immediate cause of death arose as a complication of or from an error or accident in surgery or other medical procedure or treatment, it is important to report what condition was being treated, what medical procedure was performed, the complication or error, and the result of the complication or error.
 </p>
+
+
+
+
 <p>
-<u>In the case of neoplasms:</u><br/>
+
+<u>In the case of neoplasms, <a href="#" onclick="clickHandler(event)">click here</a></u><br/>
+
+<paper-dialog class="textPopup" id="modal" modal>
+
 When indicating neoplasms as a cause of death, include the following: 
-<ol>
-  <li>primary site or that the primary site is unknown, </li>
-  <li>benign or malignant, </li>
-  <li>cell type or that the cell type is unknown, </li>
-  <li>grade of neoplasm, and </li>
-  <li>part or lobe of organ affected.</li>
-</ol>
+
 For example, a primary well-differentiated squamous cell carcinoma, lung, left upper lobe. 
+
+<!--   <div class="buttons">
+    <paper-button dialog-confirm autofocus>Tap me to close</paper-button>
+  </div> -->
+</paper-dialog>
+
+
 </p>
 
 <p>
@@ -104,3 +113,13 @@ Polymer({
 });
 
 </script>
+
+
+  <script>
+    function clickHandler(e) {
+        var dialog = document.getElementById("modal");
+        dialog.open();
+
+    }
+
+  </script>

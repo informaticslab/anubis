@@ -44,9 +44,9 @@
 
   </style>
   <paper-menu id="menu11" attr-for-selected="proute" selected="{{pageSelected1}}" >
-    <!-- <paper-item proute="guidelines">General Guidelines</paper-item>
-    <hr class="hr-menu"> -->
-    <paper-submenu>
+    <paper-item proute="importance">Introduction</paper-item>
+    <hr class="hr-menu">
+<!--     <paper-submenu>
       <paper-item class="menu-trigger">
           <span class="flex">Introduction</span>
           <iron-icon icon="expand-more"></iron-icon>
@@ -55,8 +55,7 @@
         <paper-item proute="purpose">Purpose</paper-item>
         <paper-item proute="importance">Importance</paper-item>
       </paper-menu>
-    </paper-submenu>
-    <hr class="hr-menu">
+    </paper-submenu> -->
     <paper-submenu>
       <paper-item class="menu-trigger">
           <span class="flex">Guidelines</span>
@@ -230,11 +229,11 @@
           observer: '_pageSelectedChanged',
           //notify: true
         },
-      pageSelected21: {
-          type: String,
-          observer: '_pageSelectedChanged',
-          //notify: true
-        },
+      // pageSelected21: {
+      //     type: String,
+      //     observer: '_pageSelectedChanged',
+      //     //notify: true
+      //   },
       pageSelected22: {
           type: String,
           observer: '_pageSelectedChanged',
@@ -293,10 +292,10 @@
       {
         this.$.menu11.selected=null
       }
-      if(this.$.menu21.selected!=this.menuSelected)
-      {
-        this.$.menu21.selected=null
-      }
+      // if(this.$.menu21.selected!=this.menuSelected)
+      // {
+      //   this.$.menu21.selected=null
+      // }
       if(this.$.menu22.selected!=this.menuSelected)
       {
         this.$.menu22.selected=null

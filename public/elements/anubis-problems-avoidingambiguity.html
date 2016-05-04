@@ -10,8 +10,31 @@
 		<span class="section-paragraph">
 <p>Most certifiers will find themselves, at some point, in the circumstance in which they are unable to provide a simple description of the process of death. In this situation, the certifier should try to provide a clear sequence, qualify the causes about which he or she is uncertain, and be able to explain the certification chosen. 
 </p>
+<!-- <button on-click="toggle">toggle collapse</button>
+ -->
+
+
 <p>
 When processes such as the following are reported, additional information about the etiology should also be reported:
+<span onclick="toggle('bri')">Blood Renal, Immune</span>
+<iron-collapse id="bri">
+  <div>
+  	<ul>
+<li>Anemia</li>
+<li>Coagulopathy</li>
+<li>Disseminated intravascular coagulopathy </li>
+<li>End-stage renal disease</li>
+<li>Hepatorenal syndrome</li>
+<li>Immunosuppression</li>
+<li>Pancytopenia</li>
+<li>Renal failure</li>
+<li>Thrombocytopenia</li>
+<li>Urinary tract infection</li>
+  	</ul>
+  </div>
+</iron-collapse>
+
+
 <ul>
 <li>Abscess</li>
 <li>Abdominal hemorrhage</li>
@@ -52,7 +75,7 @@ When processes such as the following are reported, additional information about 
 <li>Dehydration</li>
 <li>Dementia (when not otherwise specified)</li>
 <li>Diarrhea</li>
-<li>Disseminated intravascular coagulopathy	</li>
+<li>Disseminated intravascular coagulopathy</li>
 <li>Dysrhythmia</li>
 <li>End-stage liver disease</li>
 <li>End-stage renal disease</li>
@@ -82,7 +105,7 @@ When processes such as the following are reported, additional information about 
 <li>Myocardial infarction</li>
 <li>Necrotizing soft-tissue infection</li>
 <li>Old age</li>
-<li>Open (or closed) head injury	</li>
+<li>Open (or closed) head injury</li>
 <li>Pancytopenia</li>
 <li>Paralysis</li>
 <li>Perforated gallbladder</li>
@@ -122,7 +145,10 @@ If the certifier is unable to determine the etiology of a process such as those 
 </dom-module>
 <script>
 Polymer({
-	is:"anubis-problems-avoidingambiguity"
+	is:"anubis-problems-avoidingambiguity",
+	toggle: function(id) {
+  		this.$(id).toggle();
+	}
 
 });
 

@@ -10,15 +10,13 @@
 		<span class="section-paragraph">
 <p>Most certifiers will find themselves, at some point, in the circumstance in which they are unable to provide a simple description of the process of death. In this situation, the certifier should try to provide a clear sequence, qualify the causes about which he or she is uncertain, and be able to explain the certification chosen. 
 </p>
-<!-- <button on-click="toggle">toggle collapse</button>
- -->
-
-
 <p>
 When processes such as the following are reported, additional information about the etiology should also be reported:
-<span onclick="toggle('bri')">Blood Renal, Immune</span>
-<iron-collapse id="bri">
-  <div>
+</p>
+
+<div id="listOne" on-click="toggle" >Blood, Renal, Immune<iron-icon id="listOneCollapseIcon"  icon="chevron-right"></iron-icon></div>
+
+<iron-collapse id="listOneCollapse">
   	<ul>
 <li>Anemia</li>
 <li>Coagulopathy</li>
@@ -30,112 +28,148 @@ When processes such as the following are reported, additional information about 
 <li>Renal failure</li>
 <li>Thrombocytopenia</li>
 <li>Urinary tract infection</li>
-  	</ul>
-  </div>
+  </ul>
 </iron-collapse>
 
+<div id="listTwo" on-click="toggle" >Cardiovascular<iron-icon id="listTwoCollapseIcon"  icon="chevron-right"></iron-icon></div>
 
-<ul>
-<li>Abscess</li>
-<li>Abdominal hemorrhage</li>
-<li>Adhesions</li>
-<li>Adult respiratory distress syndrome</li>
+<iron-collapse id="listTwoCollapse">
+  	<ul>
+
 <li>Acute myocardial infarction</li>
-<li>Altered mental status</li>
-<li>Anemia</li>
-<li>Anoxia</li>
-<li>Anoxic encephalopathy</li>
 <li>Arrhythmia</li>
-<li>Ascites</li>
-<li>Aspiration</li>
 <li>Atrial fibrillation</li>
-<li>Bacteremia</li>
-<li>Bedridden</li>
-<li>Biliary obstruction</li>
-<li>Bowel obstruction</li>
-<li>Brain injury</li>
-<li>Brain stem herniation</li>
-<li>Carcinogenesis</li>
-<li>Carcinomatosis</li>
 <li>Cardiac arrest</li>
 <li>Cardiac dysrhythmia</li>
 <li>Cardiomyopathy</li>
 <li>Cardiopulmonary arrest</li>
-<li>Cellulitis</li>
-<li>Cerebral edema</li>
-<li>Cerebrovascular accident</li>
-<li>Cerebellar tonsillar herniation</li>
-<li>Chronic bedridden state</li>
-<li>Cirrhosis</li>
-<li>Coagulopathy</li>
-<li>Compression fracture</li>
 <li>Congestive heart failure</li>
-<li>Convulsions</li>
-<li>Decubiti</li>
-<li>Dehydration</li>
-<li>Dementia (when not otherwise specified)</li>
-<li>Diarrhea</li>
-<li>Disseminated intravascular coagulopathy</li>
 <li>Dysrhythmia</li>
-<li>End-stage liver disease</li>
-<li>End-stage renal disease</li>
-<li>Epidural hematoma</li>
-<li>Exsanguination</li>
-<li>Failure to thrive</li>
-<li>Fracture</li>
-<li>Gangrene</li>
-<li>Gastrointestinal hemorrhage</li>
 <li>Heart failure</li>
-<li>Hemothorax</li>
-<li>Hepatic failure</li>
-<li>Hepatitis</li>
-<li>Hepatorenal syndrome</li>
-<li>Hyperglycemia</li>
-<li>Hyperkalemia</li>
-<li>Hypovolemic shock</li>
-<li>Hyponatremia</li>
 <li>Hypotension</li>
-<li>Immunosuppression</li>
-<li>Increased intracranial pressure</li>
-<li>Intracranial hemorrhage</li>
-<li>Malnutrition</li>
-<li>Metabolic encephalopathy</li>
-<li>Multi-organ failure</li>
-<li>Multi-system organ failure</li>
+<li>Hypovolemic shock</li>
 <li>Myocardial infarction</li>
-<li>Necrotizing soft-tissue infection</li>
-<li>Old age</li>
-<li>Open (or closed) head injury</li>
-<li>Pancytopenia</li>
-<li>Paralysis</li>
-<li>Perforated gallbladder</li>
-<li>Peritonitis</li>
-<li>Pleural effusions</li>
-<li>Pneumonia</li>
-<li>Pulmonary arrest</li>
-<li>Pulmonary edema</li>
-<li>Pulmonary embolism</li>
-<li>Pulmonary insufficiency</li>
-<li>Renal failure</li>
-<li>Respiratory arrest</li>
-<li>Seizures</li>
-<li>Sepsis</li>
-<li>Septic shock</li>
 <li>Shock</li>
-<li>Starvation</li>
-<li>Subarachnoid hemorrhage</li>
-<li>Subdural hematoma</li>
-<li>Sudden death</li>
-<li>Thrombocytopenia</li>
-<li>Uncal herniation</li>
-<li>Urinary tract infection</li>
 <li>Ventricular fibrillation</li>
-<li>Ventricular tachycardia</li>
-<li>Volume depletion</li>
-</ul>
-</p>
-<p>
-If the certifier is unable to determine the etiology of a process such as those shown above, the process must be qualified as being of an unknown, undetermined, probable, presumed, or unspecified etiology so it is clear that a distinct etiology was not inadvertently or carelessly omitted.
+<li>Ventricular tachycardi</li>
+  </ul>
+</iron-collapse>
+
+<div id="listThree" on-click="toggle" >Central Nervous System<iron-icon id="listThreeCollapseIcon"  icon="chevron-right"></iron-icon></div>
+
+<iron-collapse id="listThreeCollapse">
+  	<ul>
+
+<li>	Altered mental status	</li>
+<li>	Anoxic encephalopathy	</li>
+<li>	Brain injury	</li>
+<li>	Brain stem herniation	</li>
+<li>	Cerebellar tonsillar herniation	</li>
+<li>	Cerebral edema	</li>
+<li>	Cerebrovascular accident	</li>
+<li>	Convulsions	</li>
+<li>	Dementia (when not otherwise specified)	</li>
+<li>	Epidural hematoma	</li>
+<li>	Increased intracranial pressure	</li>
+<li>	Intracranial hemorrhage	</li>
+<li>	Metabolic encephalopathy	</li>
+<li>	Open (or closed) head injury 	</li>
+<li>	Paralysis	</li>
+<li>	Seizures	</li>
+<li>	Subarachnoid hemorrhage	</li>
+<li>	Subdural hematoma	</li>
+<li>	Uncal herniation	</li>
+  </ul>
+</iron-collapse>
+
+<div id="listFour" on-click="toggle" >Gastrointestinal<iron-icon id="listFourCollapseIcon"  icon="chevron-right"></iron-icon></div>
+
+<iron-collapse id="listFourCollapse">
+  	<ul>
+<li>	Adhesions	</li>
+<li>	Biliary obstruction	</li>
+<li>	Bowel obstruction	</li>
+<li>	Cirrhosis	</li>
+<li>	Diarrhea	</li>
+<li>	End-stage liver disease	</li>
+<li>	Gastrointestinal hemorrhage	</li>
+<li>	Hepatic failure	</li>
+<li>	Hepatitis	</li>
+<li>	Hepatorenal syndrome	</li>
+<li>	Malnutrition	</li>
+<li>	Perforated gallbladder	</li>
+<li>	Starvation	</li>
+  </ul>
+</iron-collapse>
+
+
+<div id="listFive" on-click="toggle" >Musculoskeletal<iron-icon id="listFiveCollapseIcon"  icon="chevron-right"></iron-icon></div>
+
+<iron-collapse id="listFiveCollapse">
+  	<ul>
+<li>	Compression fracture	</li>
+<li>	Fracture	</li>
+  </ul>
+</iron-collapse>
+
+<div id="listSix" on-click="toggle" >Not System-Oriented<iron-icon id="listSixCollapseIcon"  icon="chevron-right"></iron-icon></div>
+
+<iron-collapse id="listSixCollapse">
+  	<ul>
+<li>	Abdominal hemorrhage	</li>
+<li>	Abscess 	</li>
+<li>	Adhesions	</li>
+<li>	Anoxia	</li>
+<li>	Ascites	</li>
+<li>	Bacteremia	</li>
+<li>	Bedridden	</li>
+<li>	Carcinogenesis	</li>
+<li>	Carcinomatosis	</li>
+<li>	Cardiopulmonary arrest	</li>
+<li>	Cellulitis	</li>
+<li>	Chronic bedridden state	</li>
+<li>	Decubiti	</li>
+<li>	Dehydration	</li>
+<li>	Exsanguination	</li>
+<li>	Failure to thrive	</li>
+<li>	Gangrene	</li>
+<li>	Hemothorax	</li>
+<li>	Hyperglycemia	</li>
+<li>	Hyperkalemia	</li>
+<li>	Hyponatremia	</li>
+<li>	Hypovolemic shock	</li>
+<li>	Malnutrition	</li>
+<li>	Multi-organ failure	</li>
+<li>	Multi-system organ failure	</li>
+<li>	Necrotizing soft-tissue infection	</li>
+<li>	Old age	</li>
+<li>	Peritonitis	</li>
+<li>	Sepsis	</li>
+<li>	Septic shock	</li>
+<li>	Shock	</li>
+<li>	Starvation	</li>
+<li>	Sudden death	</li>
+<li>	Volume depletion	</li>
+  </ul>
+</iron-collapse>
+
+<div id="listSeven" on-click="toggle" >Respiratory<iron-icon id="listSevenCollapseIcon"  icon="chevron-right"></iron-icon></div>
+
+<iron-collapse id="listSevenCollapse">
+  	<ul>
+<li>	Adult respiratory distress syndrome	</li>
+<li>	Aspiration	</li>
+<li>	Cardiopulmonary arrest	</li>
+<li>	Pleural effusions	</li>
+<li>	Pneumonia	</li>
+<li>	Pulmonary arrest	</li>
+<li>	Pulmonary edema	</li>
+<li>	Pulmonary embolism	</li>
+<li>	Pulmonary insufficiency	</li>
+<li>	Respiratory arrest	</li>
+  </ul>
+</iron-collapse>
+If the certifier is unable to determine the etiology of a process such as those shown above, the process must be qualified as being of a probable, presumed, unknown, undetermined, or unspecified etiology so it is clear that a distinct etiology was not inadvertently or carelessly omitted.
 </p>
 
 </span>
@@ -146,8 +180,20 @@ If the certifier is unable to determine the etiology of a process such as those 
 <script>
 Polymer({
 	is:"anubis-problems-avoidingambiguity",
-	toggle: function(id) {
-  		this.$(id).toggle();
+	toggle: function(e) {
+		console.log(e);
+		console.log(e.target.id);
+		var id=e.target.id;
+		document.querySelector('#'+id+'Collapse').toggle();
+		if(document.querySelector('#'+id+'Collapse').opened)
+		{
+			document.querySelector('#'+id+'CollapseIcon').icon='expand-more';
+		}
+		else
+		{
+			document.querySelector('#'+id+'CollapseIcon').icon='chevron-right';
+		}
+
 	}
 
 });

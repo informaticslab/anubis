@@ -36,42 +36,60 @@ On line (b) report the disease, injury, or complication, if any, that gave rise 
 The words "due to (or as a consequence of),"" which are printed between the lines of Part I, apply not only in sequences with an etiological or pathological basis and usually a chronological time ordering, but also to sequences in which an antecedent condition is believed to have prepared the way for a subsequent cause by damage to tissues or impairment of function. If the immediate cause of death arose as a complication of or from an error or accident in surgery or other medical procedure or treatment, it is important to report what condition was being treated, what medical procedure was performed, the complication or error, and the result of the complication or error.
 </p>
 
-
-
-
 <p>
+  <u>In the case of neoplasms, <a href="#" on-click="openD">click here</a></u><br/>
+</p>
 
-<u>In the case of neoplasms, <a href="#" onclick="clickHandler(event)">click here</a></u><br/>
+<paper-dialog id="dOne" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+<div>
+    <p>
+      <b>When indicating neoplasms as a cause of death, include the following:</b>
+    </p>
 
-<paper-dialog class="textPopup" id="modal" modal>
-
-When indicating neoplasms as a cause of death, include the following: 
-
-For example, a primary well-differentiated squamous cell carcinoma, lung, left upper lobe. 
-
-<!--   <div class="buttons">
-    <paper-button dialog-confirm autofocus>Tap me to close</paper-button>
-  </div> -->
+      <ol>
+        <li>primary site or that the primary site is unknown</li>
+        <li>benign or malignant,</li>
+        <li>cell type or that the cell type is unknown,</li>
+        <li>grade of neoplasm, and</li>
+        <li>part or lobe of organ affected.</li>
+      </ol>
+      <p>For example, a primary well-differentiated squamous cell carcinoma, lung, left upper lobe. </p>
+  </div>
 </paper-dialog>
 
 
+<p>
+  <u>In the case of an organ system failure, <a href="#" on-click="openD">click here</a></u><br/>
 </p>
+
+<paper-dialog id="dOne" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+<div>
+    <p>
+      If an organ system failure such as congestive heart failure, hepatic failure, renal failure, or respiratory failure is listed as a cause of death, always report its etiology on the line(s) beneath it (for example, renal failure due to Type I diabetes mellitus). 
+    </p>
+
+  </div>
+</paper-dialog>
+
 
 <p>
-<u>In the case of fatal injury:</u><br/>
-For each fatal injury (for example, stab wound of chest), always report: 
-<ol>
-  <li>the trauma (for example, transection of subclavian vein), and </li>
-  <li>impairment of function (for example, air embolism) that contributed to death. </li>
-</ol>
+  <u>In the case of fatal injury, <a href="#" on-click="openD">click here</a></u><br/>
 </p>
 
+<paper-dialog id="dOne" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+<div>
+    <p>
+      <b>For each fatal injury (for example, stab wound of chest), always report:</b>
+    </p>
 
+      <ol>
+        <li>the trauma (for example, transection of subclavian vein), and</li>
+        <li>the impairment of function (for example, air embolism) that contributed to death.</li>
+      </ol>
 
-<p>
-<u>In the case of an organ system failure:</u><br/>
-If an organ system failure such as congestive heart failure, hepatic failure, renal failure, or respiratory failure is listed as a cause of death, always report its etiology on the line(s) beneath it (for example, renal failure due to Type I diabetes mellitus). 
-</p>
+  </div>
+</paper-dialog>
+
 
 <p>
 <b>Approximate interval: Onset to death</b>
@@ -102,6 +120,9 @@ Polymer({
       if (e.target.withBackdrop) {
       e.target.parentNode.insertBefore(e.target._backdrop, e.target);
     }
+  },
+  openD: function(){
+    this.$.dOne.open();
   },
 	properties: {
       selected: {

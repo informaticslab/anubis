@@ -37,7 +37,7 @@ The words "due to (or as a consequence of),"" which are printed between the line
 </p>
 
 <p>
-  <u>In the case of neoplasms, <a href="#" on-click="openD">click here</a></u><br/>
+  In the case of neoplasms, <a class="buttons" href="#" on-click="openDone">click here</a>
 </p>
 
 <paper-dialog id="dOne" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
@@ -55,28 +55,34 @@ The words "due to (or as a consequence of),"" which are printed between the line
       </ol>
       <p>For example, a primary well-differentiated squamous cell carcinoma, lung, left upper lobe. </p>
   </div>
+        <div class="buttons">
+        <paper-button dialog-confirm autofocus>Close</paper-button>
+      </div>
 </paper-dialog>
 
 
 <p>
-  <u>In the case of an organ system failure, <a href="#" on-click="openD">click here</a></u><br/>
+  In the case of an organ system failure, <a href="#" on-click="openDtwo">click here</a>
 </p>
 
-<paper-dialog id="dOne" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+<paper-dialog id="dTwo" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
 <div>
     <p>
       If an organ system failure such as congestive heart failure, hepatic failure, renal failure, or respiratory failure is listed as a cause of death, always report its etiology on the line(s) beneath it (for example, renal failure due to Type I diabetes mellitus). 
     </p>
 
   </div>
+          <div class="buttons">
+        <paper-button dialog-confirm autofocus>Close</paper-button>
+      </div>
 </paper-dialog>
 
 
 <p>
-  <u>In the case of fatal injury, <a href="#" on-click="openD">click here</a></u><br/>
+ In the case of fatal injury, <a href="#" on-click="openDthree">click here</a>
 </p>
 
-<paper-dialog id="dOne" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+<paper-dialog id="dThree" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
 <div>
     <p>
       <b>For each fatal injury (for example, stab wound of chest), always report:</b>
@@ -88,6 +94,9 @@ The words "due to (or as a consequence of),"" which are printed between the line
       </ol>
 
   </div>
+          <div class="buttons">
+        <paper-button dialog-confirm autofocus>Close</paper-button>
+      </div>
 </paper-dialog>
 
 
@@ -121,8 +130,14 @@ Polymer({
       e.target.parentNode.insertBefore(e.target._backdrop, e.target);
     }
   },
-  openD: function(){
+  openDone: function(){
     this.$.dOne.open();
+  },
+  openDtwo: function(){
+    this.$.dTwo.open();
+  },
+  openDthree: function(){
+    this.$.dThree.open();
   },
 	properties: {
       selected: {

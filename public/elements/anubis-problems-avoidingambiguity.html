@@ -169,6 +169,8 @@ When processes such as the following are reported, additional information about 
 <li>	Respiratory arrest	</li>
   </ul>
 </iron-collapse>
+
+<p>
 If the certifier is unable to determine the etiology of a process such as those shown above, the process must be qualified as being of a probable, presumed, unknown, undetermined, or unspecified etiology so it is clear that a distinct etiology was not inadvertently or carelessly omitted.
 </p>
 
@@ -181,8 +183,8 @@ If the certifier is unable to determine the etiology of a process such as those 
 Polymer({
 	is:"anubis-problems-avoidingambiguity",
 	toggle: function(e) {
-		console.log(e);
-		console.log(e.target.id);
+		//console.log(e);
+		//console.log(e.target.id);
 		var id=e.target.id;
 		document.querySelector('#'+id+'Collapse').toggle();
 		if(document.querySelector('#'+id+'Collapse').opened)

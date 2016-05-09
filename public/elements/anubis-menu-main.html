@@ -222,7 +222,8 @@
       menuSelected: {
           type: String,
           notify: true,
-          reflectToAttribute: true
+          reflectToAttribute: true,
+          observer: '_checkVal',
         },
       pageSelected1: {
           type: String,
@@ -264,6 +265,13 @@
           observer: '_pageSelectedChanged',
           //notify: true
         } 
+    },
+    _checkVal: function(newIndex, oldIndex) {
+      //console.log(newIndex, oldIndex);
+      if(newIndex=="aboutus")
+      {
+        this.clearOldSelections();
+      }
     },
     _pageSelectedChanged: function(newIndex, oldIndex) {
       if(newIndex!=null)

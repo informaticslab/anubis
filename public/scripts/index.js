@@ -1,4 +1,4 @@
-console.log("load index");
+//console.log("load index");
 //window.setTimeout(loadApp,1);
 
 var app=document.querySelector('#app');
@@ -43,16 +43,16 @@ window.addEventListener('WebComponentsReady', function() {
 });
 
 
-app.displayInstalledToast = function() {
-	console.log("caching-complete");
-  document.querySelector('#caching-complete').show();
-};
+// app.displayInstalledToast = function() {
+// 	console.log("caching-complete");
+//   document.querySelector('#caching-complete').show();
+// };
 
 
-app.displayErrorToast = function(ss) {
-	console.log("caching-Error",app.state,ss);
-  document.querySelector('#caching-incomplete').show();
-};
+// app.displayErrorToast = function(ss) {
+// 	console.log("caching-Error",app.state,ss);
+//   document.querySelector('#caching-incomplete').show();
+// };
 
 // app.fired = function(ss) {
 // 	console.log("fired",ss);

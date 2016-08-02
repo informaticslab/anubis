@@ -1,6 +1,13 @@
 <!-- <link rel="import" href="/styles/custom-theme.html"> -->
 <dom-module id="anubis-problems-avoidingambiguity">
 <link rel="import" href="/styles/custom-theme.css" type="css">
+<style is="custom-style">
+  .small {
+    --iron-icon-height: 20px;
+    --iron-icon-width: 20px;
+  }
+</style>
+
 	<template>
 		<div class="page-container">
 		<!--<style include="custom-styles"></style>-->
@@ -15,7 +22,7 @@ When processes such as the following are reported as a cause of death, additiona
 </p>
 <div>
 <div style="text-indent:20px;">
-<a id="listOne" on-click="toggle" >Blood, Renal, Immune<!-- <iron-icon id="listOneCollapseIcon"  icon="chevron-right"></iron-icon> --></a>
+<a id="listOne" on-click="toggle" >Blood, Renal, Immune<iron-icon class="small" id="listOneCollapseIcon"  icon="chevron-right"></iron-icon></a>
 
 <iron-collapse id="listOneCollapse" style="text-indent:5px;">
   	<ul>
@@ -34,7 +41,7 @@ When processes such as the following are reported as a cause of death, additiona
 </div>
 
 <div style="text-indent:20px;">
-<a id="listTwo" on-click="toggle" >Cardiovascular<!-- <iron-icon id="listTwoCollapseIcon"  icon="chevron-right"></iron-icon> --></a>
+<a id="listTwo" on-click="toggle" >Cardiovascular<iron-icon class="small" id="listTwoCollapseIcon"  icon="chevron-right"></iron-icon></a>
 
 <iron-collapse id="listTwoCollapse"  style="text-indent:5px;">
   	<ul>
@@ -62,7 +69,7 @@ When processes such as the following are reported as a cause of death, additiona
 
 
 <div style="text-indent:20px;">
-<a id="listThree" on-click="toggle" >Central Nervous System<!-- <iron-icon id="listThreeCollapseIcon"  icon="chevron-right"></iron-icon> --></a>
+<a id="listThree" on-click="toggle" >Central Nervous System<iron-icon class="small" id="listThreeCollapseIcon"  icon="chevron-right"></iron-icon></a>
 
 <iron-collapse id="listThreeCollapse" style="text-indent:5px;">
   	<ul>
@@ -92,7 +99,7 @@ When processes such as the following are reported as a cause of death, additiona
 
 
 <div style="text-indent:20px;">
-<a id="listFour" on-click="toggle" >Gastrointestinal<!-- <iron-icon id="listFourCollapseIcon"  icon="chevron-right"></iron-icon> --></a>
+<a id="listFour" on-click="toggle" >Gastrointestinal<iron-icon class="small" id="listFourCollapseIcon"  icon="chevron-right"></iron-icon></a>
 
 <iron-collapse id="listFourCollapse" style="text-indent:5px;">
   	<ul>
@@ -115,7 +122,7 @@ When processes such as the following are reported as a cause of death, additiona
 
 
 <div style="text-indent:20px;">
-<a id="listFive" on-click="toggle" >Musculoskeletal<!-- <iron-icon id="listFiveCollapseIcon"  icon="chevron-right"></iron-icon> --></a>
+<a id="listFive" on-click="toggle" >Musculoskeletal<iron-icon class="small" id="listFiveCollapseIcon"  icon="chevron-right"></iron-icon></a>
 
 <iron-collapse id="listFiveCollapse" style="text-indent:5px;">
   	<ul>
@@ -127,7 +134,7 @@ When processes such as the following are reported as a cause of death, additiona
 
 
 <div style="text-indent:20px;">
-<a id="listSeven" on-click="toggle" >Respiratory<!-- <iron-icon id="listSevenCollapseIcon"  icon="chevron-right">s</iron-icon> --></a>
+<a id="listSeven" on-click="toggle" >Respiratory<iron-icon class="small" id="listSevenCollapseIcon"  icon="chevron-right">s</iron-icon></a>
 
 <iron-collapse id="listSevenCollapse" style="text-indent:5px;">
   	<ul>
@@ -147,7 +154,7 @@ When processes such as the following are reported as a cause of death, additiona
 
 
 <div style="text-indent:20px;">
-<a id="listSix" on-click="toggle" >Not System-Oriented<!-- <iron-icon id="listSixCollapseIcon"  icon="chevron-right"></iron-icon> --></a>
+<a id="listSix" on-click="toggle" >Not System-Oriented<iron-icon class="small" id="listSixCollapseIcon"  icon="chevron-right"></iron-icon></a>
 
 <iron-collapse id="listSixCollapse" style="text-indent:5px;">
   	<ul>
@@ -209,15 +216,30 @@ Polymer({
 		//console.log(e);
 		//console.log(e.target.id);
 		var id=e.target.id;
+		if(id.endsWith("Icon"))
+		{
+			id=id.substring(0,id.length-12);
+			//console.log(id);
+		}
+		else
+		{
+			id=id.substring(0,id.length);
+			//console.log(id);
+		}
+		
+		
+
 		document.querySelector('#'+id+'Collapse').toggle();
-		// if(document.querySelector('#'+id+'Collapse').opened)
-		// {
-		// 	document.querySelector('#'+id+'CollapseIcon').icon='expand-more';
-		// }
-		// else
-		// {
-		// 	document.querySelector('#'+id+'CollapseIcon').icon='chevron-right';
-		// }
+		
+
+		if(document.querySelector('#'+id+'Collapse').opened)
+		{
+			document.querySelector('#'+id+'CollapseIcon').icon='expand-more';
+		}
+		else
+		{
+			document.querySelector('#'+id+'CollapseIcon').icon='chevron-right';
+		}
 
 	}
 

@@ -218,7 +218,8 @@ Polymer({
 		//console.log(e);
 		//console.log(e.target.id);
 		var id=e.target.id;
-		if(id.endsWith("Icon"))
+		//console.log(id.substring(id.length-4,id.length));
+		if(id.substring(id.length-4,id.length)=="Icon")
 		{
 			id=id.substring(0,id.length-12);
 			//console.log(id);

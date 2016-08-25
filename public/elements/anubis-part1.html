@@ -134,7 +134,7 @@ The words "due to (or as a consequence of)," which are printed between the lines
 </paper-dialog>
 
 
-<p>
+<!-- <p>
  In the case of fatal injury, <a href="#" on-click="openDthree">click here.</a>
 </p>
 
@@ -153,7 +153,40 @@ The words "due to (or as a consequence of)," which are printed between the lines
           <div class="buttons">
         <paper-button dialog-confirm autofocus>Close</paper-button>
       </div>
+</paper-dialog> -->
+
+
+<p>
+ In the case of dementia, <a href="#" on-click="openDthree">click here.</a>
+</p>
+
+<paper-dialog id="dThree" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+<div>
+    <p>
+      Dementia may be reported as the underlying cause of death in Part I or as a contributing cause in Part II.  When reporting dementia as a cause of death, please specify the type of dementia (e.g., Alzheimer’s disease, vascular dementia, Lewy Body dementia, etc.).  Even if the diagnosis is not definitive, if a specific diagnosis is suspected or likely, then it is appropriate to qualify the diagnosis as "possible," "probable," or "presumed."
+    </p>
+</div>
+          <div class="buttons">
+        <paper-button dialog-confirm autofocus>Close</paper-button>
+      </div>
 </paper-dialog>
+
+
+<p>
+ In the case of diabetes, <a href="#" on-click="openDsix">click here.</a>
+</p>
+
+<paper-dialog id="dSix" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+<div>
+    <p>
+      Diabetes mellitus may be reported as a cause of death, either as one of the direct causes of death in Part I or as a contributing cause of death in Part II.  When indicating diabetes as a cause of death, specify whether Type I (and whether immune-mediated or idiopathic), Type II, gestational diabetes, monogenic diabetes (and whether neonatal diabetes or maturity-onset diabetes of the young [MODY]), or some other specific type of diabetes, if possible.
+    </p>
+  </div>
+          <div class="buttons">
+        <paper-button dialog-confirm autofocus>Close</paper-button>
+      </div>
+</paper-dialog>
+
 
 <br/>
 <p>
@@ -202,6 +235,9 @@ Polymer({
   },
   openDfive: function(){
     this.$.dFive.open();
+  },
+  openDsix: function(){
+    this.$.dSix.open();
   },
 	properties: {
       selected: {

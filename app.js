@@ -4,6 +4,7 @@ var app = express();
 var path = require('path');
 var rootPath = path.normalize(__dirname + '/');
 
+
 //app.use(compression());
 
 app.set('views', rootPath+'/public/views')

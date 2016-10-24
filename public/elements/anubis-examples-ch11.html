@@ -10,12 +10,25 @@
 		<span class="section-paragraph">
 <p>A 30-year-old, gravida-six, para-five, with a history of gestational hypertension, reported to the emergency room at 36 weeks gestation with complaints of abdominal cramping and light vaginal bleeding during the past 12 hours. At time of first assessment, fetal heart tones were detected. The uterus was tense, irritable, and tender. The mother was hypotensive with tachycardia. A presumptive diagnosis of abruptio placenta was made, and an emergency cesarean section was performed under general anesthesia. The baby was stillborn. The mother continued to bleed from her uterus and phlebotomy sites and went into profound shock secondary to disseminated intravascular coagulation. Despite administration of blood and clotting factors, intravascular pressure could not be maintained, and the mother died on the operating table. Maternal autopsy confirmed the clinical diagnosis. A death certificate would be completed for the mother and a fetal death report for the fetus. The cause of fetal death is reported using a different format. Please refer to the <i><a href="http://www.cdc.gov/nchs/data/misc/hb_me.pdf" target="_blank">Medical Examiners’ and Coroners’ Handbook on Death Registration and Fetal Death Reporting</i> </a> for further information. 
 </p>
+    <p>
+        <img class="container-small" src="/images/Example 11a.png" on-click="openDialog"/>
+    </p>
+    <simple-overlay on-iron-overlay-opened="patchOverlay" id="backdrop-ch11a" with-backdrop>
+        <img style="width:100%" src="/images/Example 11a.png"/>
+    </simple-overlay>
 <p>
 <i>
 Notes on death certification:<br/>
 In this case, gestational hypertension would be considered a factor that contributed to the death. However, it would not be in the direct causal sequence of Part I, so it would be reported in Part II. 
 </i>
 </p>
+    <p>
+        <img class="container-small" src="/images/Example 11b.png" on-click="openDialog1"/>
+    </p>
+    <simple-overlay on-iron-overlay-opened="patchOverlay" id="backdrop-ch11b" with-backdrop>
+        <img style="width:100%" src="/images/Example 11b.png"/>
+    </simple-overlay>
+
 		</span>
 
 </div>
@@ -23,7 +36,27 @@ In this case, gestational hypertension would be considered a factor that contrib
 </dom-module>
 <script>
 Polymer({
-	is:"anubis-examples-ch11"
+	is:"anubis-examples-ch11",
+	openDialog: function(){
+        //console.log("opened");
+        var dialog = document.getElementById("backdrop-ch11a");
+        if (dialog) {
+          dialog.open();
+        }
+    },
+    openDialog1: function(){
+        //console.log("opened");
+        var dialog = document.getElementById("backdrop-ch11b");
+        if (dialog) {
+          dialog.open();
+        }
+    },
+    patchOverlay: function (e) {
+      if (e.target.withBackdrop) {
+      e.target.parentNode.insertBefore(e.target._backdrop, e.target);
+    }
+    },
+
 
 });
 

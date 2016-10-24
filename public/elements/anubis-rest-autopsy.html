@@ -1,4 +1,5 @@
 <dom-module id="anubis-rest-autopsy">
+<link rel="import" href="/styles/custom-theme.css" type="css">
 	<template>
     <div class="page-container">
     <!--<style include="custom-styles"></style>-->
@@ -11,13 +12,32 @@
 	<p>Check “Yes” if autopsy findings were available to complete the cause of death section; otherwise, check “No.” Leave this item blank if no autopsy was performed.</p>
 
     </span>
+    <br/>
+    <p>
+        <img class="container-small" src="/images/Autopsy.png" on-click="openDialog"/>
+    </p>
+    <simple-overlay on-iron-overlay-opened="patchOverlay" id="backdrop-p3" with-backdrop>
+        <img style="width:100%" src="/images/Autopsy.png"/>
+    </simple-overlay>
 </div>
 
 	</template>
 </dom-module>
 <script>
 Polymer({
-	is:"anubis-rest-autopsy"
+	is:"anubis-rest-autopsy",
+    openDialog: function(){
+        //console.log("opened");
+        var dialog = document.getElementById("backdrop-p3");
+        if (dialog) {
+          dialog.open();
+        }
+    },
+    patchOverlay: function (e) {
+      if (e.target.withBackdrop) {
+      e.target.parentNode.insertBefore(e.target._backdrop, e.target);
+    }
+    },
 
 });
 

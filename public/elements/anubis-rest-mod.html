@@ -10,13 +10,33 @@
       	Always check a response for manner of death. In most cases, the manner of death will be checked "Natural." In those cases when an accident, suicide, or homicide has occurred, the medical examiner or coroner must be notified. If the medical examiner or coroner does not assume jurisdiction, the physician should check the appropriate manner of death and describe the injury or poisoning. Indicate “Pending Investigation” if the manner of death cannot be determined within the statutory time limit for filing the death certificate. This response should be changed to one of the other terms later. Indicate “Could not be determined” only when it is impossible to determine the manner of death. Manner of death is important in determining accurate causes of death, processing insurance claims, and conducting statistical studies of injuries and death.
       </p>
     </span>
+    <br/>
+    <p>
+        <img class="container-small" src="/images/MOD.png" on-click="openDialog"/>
+    </p>
+    <simple-overlay on-iron-overlay-opened="patchOverlay" id="backdrop-p4" with-backdrop>
+        <img style="width:100%" src="/images/MOD.png"/>
+    </simple-overlay>
+
 </div>
 
 	</template>
 </dom-module>
 <script>
 Polymer({
-	is:"anubis-rest-mod"
+	is:"anubis-rest-mod",
+  openDialog: function(){
+        //console.log("opened");
+        var dialog = document.getElementById("backdrop-p4");
+        if (dialog) {
+          dialog.open();
+        }
+    },
+    patchOverlay: function (e) {
+      if (e.target.withBackdrop) {
+      e.target.parentNode.insertBefore(e.target._backdrop, e.target);
+    }
+    },
 
 });
 

@@ -10,6 +10,12 @@
 		<span class="section-paragraph">
 <p>A 92-year-old male was found dead in bed. He had no significant medical history. Autopsy disclosed minimal coronary disease and generalized atrophic changes commonly associated with aging. No specific cause of death was identified. Toxicology was negative. 
 </p>
+    <p>
+        <img class="container-small" src="/images/Example 12.png" on-click="openDialog"/>
+    </p>
+    <simple-overlay on-iron-overlay-opened="patchOverlay" id="backdrop-ch12" with-backdrop>
+        <img style="width:100%" src="/images/Example 12.png"/>
+    </simple-overlay>
 <p>
 <i>
 Notes:<br/>
@@ -23,7 +29,20 @@ In some cases, no compelling cause of death presents itself. It is acceptable to
 </dom-module>
 <script>
 Polymer({
-	is:"anubis-examples-ch12"
+	is:"anubis-examples-ch12",
+	openDialog: function(){
+        //console.log("opened");
+        var dialog = document.getElementById("backdrop-ch12");
+        if (dialog) {
+          dialog.open();
+        }
+    },
+    patchOverlay: function (e) {
+      if (e.target.withBackdrop) {
+      e.target.parentNode.insertBefore(e.target._backdrop, e.target);
+    }
+    },
+
 
 });
 

@@ -14,7 +14,7 @@ All other important diseases or conditions that were present at the time of deat
       <p>
         <img class="container" src="/images/Part2.png" on-click="openDialog"/>
       </p>
-      <simple-overlay on-iron-overlay-opened="patchOverlay" id="backdrop-p2" with-backdrop>
+      <simple-overlay id="backdrop-p2" with-backdrop>
         <img style="width:100%" src="/images/Part2.png"/>
       </simple-overlay>
 <br/>
@@ -37,11 +37,6 @@ Polymer({
           dialog.open();
         }
   },
-  patchOverlay: function (e) {
-      if (e.target.withBackdrop) {
-      e.target.parentNode.insertBefore(e.target._backdrop, e.target);
-  }
-},
 	properties: {
       selected: {
           type: String,

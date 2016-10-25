@@ -16,7 +16,7 @@
     <p>
         <img class="container-small" src="/images/Autopsy.png" on-click="openDialog"/>
     </p>
-    <simple-overlay on-iron-overlay-opened="patchOverlay" id="backdrop-p3" with-backdrop>
+    <simple-overlay id="backdrop-p3" with-backdrop>
         <img style="width:100%" src="/images/Autopsy.png"/>
     </simple-overlay>
 </div>
@@ -32,12 +32,7 @@ Polymer({
         if (dialog) {
           dialog.open();
         }
-    },
-    patchOverlay: function (e) {
-      if (e.target.withBackdrop) {
-      e.target.parentNode.insertBefore(e.target._backdrop, e.target);
     }
-    },
 
 });
 

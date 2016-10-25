@@ -26,7 +26,7 @@
       <p>
         <img class="container" src="/images/Part1.png" on-click="openDialog"/>
       </p>
-      <simple-overlay on-iron-overlay-opened="patchOverlay" id="backdrop-p1" with-backdrop>
+      <simple-overlay id="backdrop-p1" with-backdrop>
         <img style="width:100%" src="/images/Part1.png"/>
       </simple-overlay>
 <br/>      
@@ -215,11 +215,6 @@ Polymer({
         if (dialog) {
           dialog.open();
         }
-  },
-  patchOverlay: function (e) {
-      if (e.target.withBackdrop) {
-      e.target.parentNode.insertBefore(e.target._backdrop, e.target);
-    }
   },
   openDone: function(){
     this.$.dOne.open();

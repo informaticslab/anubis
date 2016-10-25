@@ -13,7 +13,7 @@
     <p>
         <img class="container-small" src="/images/Example 11a.png" on-click="openDialog"/>
     </p>
-    <simple-overlay on-iron-overlay-opened="patchOverlay" id="backdrop-ch11a" with-backdrop>
+    <simple-overlay id="backdrop-ch11a" with-backdrop>
         <img style="width:100%" src="/images/Example 11a.png"/>
     </simple-overlay>
 <p>
@@ -25,7 +25,7 @@ In this case, gestational hypertension would be considered a factor that contrib
     <p>
         <img class="container-small" src="/images/Example 11b.png" on-click="openDialog1"/>
     </p>
-    <simple-overlay on-iron-overlay-opened="patchOverlay" id="backdrop-ch11b" with-backdrop>
+    <simple-overlay id="backdrop-ch11b" with-backdrop>
         <img style="width:100%" src="/images/Example 11b.png"/>
     </simple-overlay>
 
@@ -50,13 +50,7 @@ Polymer({
         if (dialog) {
           dialog.open();
         }
-    },
-    patchOverlay: function (e) {
-      if (e.target.withBackdrop) {
-      e.target.parentNode.insertBefore(e.target._backdrop, e.target);
     }
-    },
-
 
 });
 

@@ -55,25 +55,18 @@
 Polymer({
 	is:"anubis-certify",
 	openDialog: function(){
-        var dialog = document.getElementById("backdrop");
-        if (dialog) {
-          dialog.open();
-        }
-	},
-	openDialog1: function(){
 
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		 // some code..
-		}else
-		{
-			var dialog = document.getElementById("backdrop1");
-	        if (dialog) {
-	          dialog.open();
-        	}
-		}
-
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
 	}
+	else{
+	        var dialog = document.getElementById("backdrop");
+	        if (dialog) {
+	          dialog.open();
+	        }
+	    }
+	},
+
 });
 
 </script>

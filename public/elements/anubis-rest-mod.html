@@ -26,11 +26,17 @@
 Polymer({
 	is:"anubis-rest-mod",
   openDialog: function(){
+
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+    }
+    else{
         //console.log("opened");
         var dialog = document.getElementById("backdrop-p4");
         if (dialog) {
           dialog.open();
         }
+      }
     }
 
 });

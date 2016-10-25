@@ -32,10 +32,15 @@ Polymer({
 	is:"anubis-examples-ch3",
 	openDialog: function(){
         //console.log("opened");
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+    }
+    else{
         var dialog = document.getElementById("backdrop-ch3");
         if (dialog) {
           dialog.open();
         }
+    }
     }
 
 

@@ -211,10 +211,16 @@ These intervals usually are established by the physician on the basis of availab
 Polymer({
 	is:"anubis-part1",
   openDialog: function(){
+
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+      }
+      else{
         var dialog = document.getElementById("backdrop-p1");
         if (dialog) {
           dialog.open();
         }
+      }
   },
   openDone: function(){
     this.$.dOne.open();
@@ -244,13 +250,3 @@ Polymer({
 });
 
 </script>
-
-
-  <script>
-    function clickHandler(e) {
-        var dialog = document.getElementById("modal");
-        dialog.open();
-
-    }
-
-  </script>

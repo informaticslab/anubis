@@ -32,11 +32,16 @@ In this case, insulin-dependent diabetes mellitus, cigarette smoking, hypertensi
 Polymer({
 	is:"anubis-examples-ch9",
 	openDialog: function(){
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+    }
+    else{
         //console.log("opened");
         var dialog = document.getElementById("backdrop-ch9");
         if (dialog) {
           dialog.open();
         }
+    }
     }
 
 });

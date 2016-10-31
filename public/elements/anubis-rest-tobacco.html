@@ -8,7 +8,7 @@
     <span class="section-paragraph">
     <br/>
     <p>
-        <img class="container-small" src="/images/Tobacco.png" on-click="openDialog"/>
+        <img id="img1" class="container" src="/images/Tobacco.png" on-click="openDialog" on-load="onLoaded"/>
     </p>
     <br/>
       <p>
@@ -37,6 +37,15 @@ Polymer({
         if (dialog) {
           dialog.open();
         }
+      }
+    },
+    onLoaded: function() {
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        document.getElementById("img1").style.width="100%";
+      }
+      else
+      {
+        document.getElementById("img1").style.width="auto";
       }
     }
 

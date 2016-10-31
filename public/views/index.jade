@@ -52,7 +52,7 @@ html
                 //paper-icon-button(icon="icons:more-vert" )
                 paper-menu-button(id="more-menu" vertical-align="top" horizontal-align="right" )
                   paper-icon-button(icon="icons:more-vert" class="dropdown-trigger")
-                  paper-menu(class="dropdown-content" attr-for-selected="proute" selected="{{page}}")
+                  paper-menu#aboutmenu(class="dropdown-content" attr-for-selected="proute" selected="{{page}}" on-iron-activate="closeMenu")
                     paper-item(proute="aboutus") About&nbsp;Us
                     //paper-item Help&nbsp;&amp;&nbsp;FAQ
                     //paper-item Share

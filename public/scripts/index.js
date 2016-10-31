@@ -57,6 +57,16 @@ window.addEventListener('WebComponentsReady', function() {
 // app.fired = function(ss) {
 // 	console.log("fired",ss);
 // };
+app.closeMenu=function()
+{
+
+	//temp wprk around to close menu upon selecting current item again.
+	var temp=app.page;
+	app.page="#";
+	app.page=temp;
+
+	document.querySelector('#aboutmenu').opened=false;
+}
 
 function loadApp()
 {
